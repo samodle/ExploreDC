@@ -296,13 +296,13 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             CardViewFHeight.isActive = true
             ContainerViewHeight.isActive = true
             
-            let CardView2AHeight = CardViewA.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2BHeight = CardViewB.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2CHeight = CardViewC.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2DHeight = CardViewD.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2EHeight = CardViewE.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2FHeight = CardViewF.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let Container2ViewHeight = ContainerViewNew.heightAnchor.constraint(equalToConstant: 1600)
+            let CardView2AHeight = CardView2A.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
+            let CardView2BHeight = CardView2B.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
+            let CardView2CHeight = CardView2C.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
+            let CardView2DHeight = CardView2D.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
+            let CardView2EHeight = CardView2E.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
+            let CardView2FHeight = CardView2F.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
+            let Container2ViewHeight = ContainerViewNew2.heightAnchor.constraint(equalToConstant: 1600)
             
             CardView2AHeight.isActive = true
             CardView2BHeight.isActive = true
