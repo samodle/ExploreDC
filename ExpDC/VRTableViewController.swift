@@ -18,8 +18,11 @@ class VRTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainPanoView.enableFullscreenButton = true
+        mainPanoView.enableCardboardButton = true
         mainPanoView.enableInfoButton = false
-        
+        mainPanoView.load(UIImage(named: "pano_scusD01.png"),
+             of: GVRPanoramaImageType.mono)
     }
     
     

@@ -35,6 +35,8 @@
 		2289BE6A2050C85600DF815E /* verizon00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2289BE592050C85600DF815E /* verizon00.jpg */; };
 		22A01C792080DE9E00839214 /* gvrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A01C782080DE9E00839214 /* gvrTableViewCell.swift */; };
 		22A01C7B2080E0FF00839214 /* VRTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A01C7A2080E0FF00839214 /* VRTableViewController.swift */; };
+		22A01C7D2080EA3A00839214 /* pano_scusD01.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A01C7C2080EA3A00839214 /* pano_scusD01.png */; };
+		22A01C7F2080EDEB00839214 /* VRMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A01C7E2080EDEB00839214 /* VRMapViewController.swift */; };
 		22AFB4C62077A27200AA845A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 22AFB4C52077A27200AA845A /* awsconfiguration.json */; };
 		22BC451A207BD2F500DB1867 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BC4517207BD2F500DB1867 /* CardView.swift */; };
 		22BC451B207BD2F500DB1867 /* MyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BC4518207BD2F500DB1867 /* MyConstants.swift */; };
@@ -75,6 +77,8 @@
 		2289BE592050C85600DF815E /* verizon00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = verizon00.jpg; sourceTree = "<group>"; };
 		22A01C782080DE9E00839214 /* gvrTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gvrTableViewCell.swift; sourceTree = "<group>"; };
 		22A01C7A2080E0FF00839214 /* VRTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRTableViewController.swift; sourceTree = "<group>"; };
+		22A01C7C2080EA3A00839214 /* pano_scusD01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pano_scusD01.png; sourceTree = "<group>"; };
+		22A01C7E2080EDEB00839214 /* VRMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRMapViewController.swift; sourceTree = "<group>"; };
 		22AE3810201FFDC600BE939F /* Vacation 360-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vacation 360-Bridging-Header.h"; sourceTree = "<group>"; };
 		22AFB4C52077A27200AA845A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		22BC4517207BD2F500DB1867 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		0473CA6B1CF13E2300926B6C /* 360 Images */ = {
 			isa = PBXGroup;
 			children = (
+				22A01C7C2080EA3A00839214 /* pano_scusD01.png */,
 				2289BE542050C85600DF815E /* bg01.jpg */,
 				2289BE4D2050C85500DF815E /* bg02.jpg */,
 				2289BE572050C85600DF815E /* bg03.jpg */,
@@ -182,6 +187,7 @@
 				04030D991D1593090018DB34 /* VRViewController.swift */,
 				22035C3C2077CA9800D675FE /* TestViewController.swift */,
 				22A01C7A2080E0FF00839214 /* VRTableViewController.swift */,
+				22A01C7E2080EDEB00839214 /* VRMapViewController.swift */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A01C7D2080EA3A00839214 /* pano_scusD01.png in Resources */,
 				043BB7921CCD4CA5000521FC /* LaunchScreen.storyboard in Resources */,
 				043BB78F1CCD4CA5000521FC /* Assets.xcassets in Resources */,
 				2289BE622050C85600DF815E /* bible01.jpg in Resources */,
@@ -391,6 +398,7 @@
 				22BC451A207BD2F500DB1867 /* CardView.swift in Sources */,
 				22A01C7B2080E0FF00839214 /* VRTableViewController.swift in Sources */,
 				22CF14DD207D391700EE0035 /* SMBasicSegmentView.swift in Sources */,
+				22A01C7F2080EDEB00839214 /* VRMapViewController.swift in Sources */,
 				22663D8B207D7073004D0D38 /* SlideDrawerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

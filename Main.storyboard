@@ -862,10 +862,10 @@
             </objects>
             <point key="canvasLocation" x="2019" y="930"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="1yy-6h-VsT">
             <objects>
-                <viewController id="vv6-IC-ghp" sceneMemberID="viewController">
+                <viewController id="vv6-IC-ghp" customClass="VRMapViewController" customModule="ExploreDC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zz8-EQ-vLF"/>
                         <viewControllerLayoutGuide type="bottom" id="gkh-2y-5ra"/>
@@ -873,8 +873,33 @@
                     <view key="view" contentMode="scaleToFill" id="WJp-Yx-ijp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6i-Vl-H22" customClass="GVRPanoramaView">
+                                <rect key="frame" x="25" y="25" width="364" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="mZT-hr-z3Q"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Yj-Mq-S8q">
+                                <rect key="frame" x="25" y="385" width="364" height="346"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Yj-Mq-S8q" firstAttribute="leading" secondItem="K6i-Vl-H22" secondAttribute="leading" id="9L7-my-wdz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K6i-Vl-H22" secondAttribute="trailing" constant="5" id="VRb-AZ-y6R"/>
+                            <constraint firstItem="1Yj-Mq-S8q" firstAttribute="top" secondItem="K6i-Vl-H22" secondAttribute="bottom" constant="10" id="ZgU-k3-LlP"/>
+                            <constraint firstItem="K6i-Vl-H22" firstAttribute="top" secondItem="Zz8-EQ-vLF" secondAttribute="bottom" constant="5" id="ir5-Yo-rXx"/>
+                            <constraint firstItem="gkh-2y-5ra" firstAttribute="top" secondItem="1Yj-Mq-S8q" secondAttribute="bottom" constant="5" id="oAB-d6-Rvd"/>
+                            <constraint firstItem="1Yj-Mq-S8q" firstAttribute="trailing" secondItem="K6i-Vl-H22" secondAttribute="trailing" id="t7F-BN-yQv"/>
+                            <constraint firstItem="K6i-Vl-H22" firstAttribute="leading" secondItem="WJp-Yx-ijp" secondAttribute="leadingMargin" constant="5" id="wh3-Yc-aZM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainPanoView" destination="K6i-Vl-H22" id="VCa-iw-px8"/>
+                        <outlet property="myMapView" destination="1Yj-Mq-S8q" id="b2P-oQ-gWV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilf-op-mGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -892,8 +917,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZJ-u1-NrS" customClass="GVRPanoramaView">
-                                <rect key="frame" x="20" y="37" width="374" height="250"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZJ-u1-NrS" customClass="GVRPanoramaView">
+                                <rect key="frame" x="25" y="25" width="374" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="tSv-oa-o9J"/>
@@ -946,13 +971,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="leading" secondItem="vsc-qN-2mO" secondAttribute="leadingMargin" constant="20" id="8MM-UT-7Bz"/>
-                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="top" secondItem="yTo-Lq-Xgz" secondAttribute="bottom" constant="20" id="FsG-7m-ssA"/>
-                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="trailing" secondItem="vsc-qN-2mO" secondAttribute="trailingMargin" constant="20" id="OO0-i8-e5g"/>
+                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="top" secondItem="yTo-Lq-Xgz" secondAttribute="bottom" constant="5" id="6fK-to-sO4"/>
                             <constraint firstItem="iwO-nf-Bjx" firstAttribute="top" secondItem="TZJ-u1-NrS" secondAttribute="bottom" constant="10" id="Ys2-sJ-Wym"/>
-                            <constraint firstItem="ctN-EG-9QB" firstAttribute="top" secondItem="iwO-nf-Bjx" secondAttribute="bottom" constant="20" id="e5i-zv-oOg"/>
+                            <constraint firstItem="ctN-EG-9QB" firstAttribute="top" secondItem="iwO-nf-Bjx" secondAttribute="bottom" constant="10" id="e5i-zv-oOg"/>
                             <constraint firstItem="iwO-nf-Bjx" firstAttribute="trailing" secondItem="TZJ-u1-NrS" secondAttribute="trailing" id="jBY-Dk-5sf"/>
+                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="trailing" secondItem="vsc-qN-2mO" secondAttribute="trailingMargin" constant="5" id="kZD-zX-M0U"/>
                             <constraint firstItem="iwO-nf-Bjx" firstAttribute="leading" secondItem="TZJ-u1-NrS" secondAttribute="leading" id="lhJ-0f-cfP"/>
+                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="leading" secondItem="vsc-qN-2mO" secondAttribute="leadingMargin" constant="5" id="yk7-v1-fKZ"/>
                         </constraints>
                     </view>
                     <connections>

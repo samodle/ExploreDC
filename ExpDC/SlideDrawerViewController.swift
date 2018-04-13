@@ -210,22 +210,37 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         //Card - Packing Line KPIs
         let gesture1 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
         self.CardViewA.addGestureRecognizer(gesture1)
+        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        self.CardViewB.addGestureRecognizer(gesture2)
+        let gesture3 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        self.CardViewC.addGestureRecognizer(gesture3)
+        let gesture4 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        self.CardViewD.addGestureRecognizer(gesture4)
+        let gesture5 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        self.CardViewE.addGestureRecognizer(gesture5)
+        let gesture6 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        self.CardViewF.addGestureRecognizer(gesture6)
         
-        //Card - Loss Compass
-      //  let gesture2 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenLossCompass(_:)))
+        let gesture21 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        self.CardView2A.addGestureRecognizer(gesture21)
+        let gesture22 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        self.CardView2B.addGestureRecognizer(gesture22)
+        let gesture23 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        self.CardView2C.addGestureRecognizer(gesture23)
+        let gesture24 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        self.CardView2D.addGestureRecognizer(gesture24)
+        let gesture25 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        self.CardView2E.addGestureRecognizer(gesture25)
+        let gesture26 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        self.CardView2F.addGestureRecognizer(gesture26)
+        
+        
+        
+        //Card - old stuff
+        //  let gesture2 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenLossCompass(_:)))
       //  self.LossCompassCard.addGestureRecognizer(gesture2)
       //  self.LossCompassGraphView.addGestureRecogni/zer(gesture2)
        // self.LossCompassLabel.addGestureRecognizer(gesture2)
-        
-        //Card - Trends
-    //    let gesture3 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenTrends(_:)))
-    //    self.TrendsCard.addGestureRecognizer(gesture3)
-        //self.TrendsGraphView.addGestureRecognizer(gesture3)
-        
-        //Card - SigmaControl
-     //   let gesture4 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenSigmaControl(_:)))
-     //   self.SigmaControlCard.addGestureRecognizer(gesture4)
-        //self.SigmaControlGraphView.addGestureRecognizer(gesture4)
     }
 
     //MARK: Map Kit
