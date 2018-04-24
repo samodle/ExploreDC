@@ -17,7 +17,8 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     
     //MARK: Navigation Prep
     var DidWeJustUnwind: Bool = false
-    var SegueToExecute: String = "ShowLossCompass"
+    var SegueToExecute: String = "HanShotFirst"
+    var LastCardTapped: FloatingCard = FloatingCard.NA
     
     @IBAction func returnToLineSelect(_ sender: AnyObject) {
         goHome()
@@ -37,14 +38,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             
             ContainerViewNew.isHidden = false
             ContainerViewNew2.isHidden = true
-            /*
-            panoCardA.isHidden = false
-            panoCardB.isHidden = false
-            panoCardC.isHidden = false
-            panoCardD.isHidden = false
-            panoCardE.isHidden = false
-            panoCardF.isHidden = false
-            */
+
         case 1:
             print("Area Selected")
             isDaySelected = false
@@ -52,15 +46,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             
             ContainerViewNew.isHidden = true
             ContainerViewNew2.isHidden = false
-            /*
-            panoCardA.isHidden = true
-            panoCardB.isHidden = true
-            panoCardC.isHidden = true
-            panoCardD.isHidden = true
-            panoCardE.isHidden = true
-            panoCardF.isHidden = true
- */
-         
+     
     /*    case 2:
             print("month selected")
             isDaySelected = false
@@ -121,7 +107,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         super.init(coder: aDecoder)
     }
 
-    //MARK: View Load
+    //MARK: View Appear/Load
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -207,34 +193,32 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         
         //Programatically adding touch event handler to Cards (CardViewCOntrollers)
         
-        //Card - Packing Line KPIs
-        let gesture1 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        //Card - gesture recognizers. https://developer.apple.com/documentation/uikit/uitapgesturerecognizer?preferredLanguage=occ
+        let gesture1 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIsA(_:)))
         self.CardViewA.addGestureRecognizer(gesture1)
-        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIsB(_:)))
         self.CardViewB.addGestureRecognizer(gesture2)
-        let gesture3 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        let gesture3 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIsC(_:)))
         self.CardViewC.addGestureRecognizer(gesture3)
-        let gesture4 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        let gesture4 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIsD(_:)))
         self.CardViewD.addGestureRecognizer(gesture4)
-        let gesture5 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        let gesture5 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIsE(_:)))
         self.CardViewE.addGestureRecognizer(gesture5)
-        let gesture6 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs(_:)))
+        let gesture6 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIsF(_:)))
         self.CardViewF.addGestureRecognizer(gesture6)
         
-        let gesture21 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        let gesture21 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2A(_:)))
         self.CardView2A.addGestureRecognizer(gesture21)
-        let gesture22 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        let gesture22 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2B(_:)))
         self.CardView2B.addGestureRecognizer(gesture22)
-        let gesture23 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        let gesture23 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2C(_:)))
         self.CardView2C.addGestureRecognizer(gesture23)
-        let gesture24 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        let gesture24 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2D(_:)))
         self.CardView2D.addGestureRecognizer(gesture24)
-        let gesture25 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        let gesture25 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2E(_:)))
         self.CardView2E.addGestureRecognizer(gesture25)
-        let gesture26 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2(_:)))
+        let gesture26 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2F(_:)))
         self.CardView2F.addGestureRecognizer(gesture26)
-        
-        
         
         //Card - old stuff
         //  let gesture2 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenLossCompass(_:)))
@@ -244,24 +228,80 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     }
 
     //MARK: Map Kit
-    
- 
     func centerMapOnLocation(location: CLLocation, mKmV: MKMapView, regionRadius: CLLocationDistance) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius, regionRadius)
         mKmV.setRegion(coordinateRegion, animated: true)
     }
     
-    
     //MARK: Segues
     
-    @objc func OpenAllKPIs(_ sender:UITapGestureRecognizer){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowCategorySegue" { //this means we are gonna do drugs. right? right guys?
+
+            let toolPageViewController = segue.destination as! VRTableViewController
+            toolPageViewController.lastCardClick = LastCardTapped
+        }
+    }
+    
+    @objc func OpenAllKPIsA(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.A
+        performSegue(withIdentifier: "ShowCategorySegue", sender: self)
+    }
+    @objc func OpenAllKPIsB(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.B
+        performSegue(withIdentifier: "ShowCategorySegue", sender: self)
+    }
+    @objc func OpenAllKPIsC(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.C
+        performSegue(withIdentifier: "ShowCategorySegue", sender: self)
+    }
+    @objc func OpenAllKPIsD(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.D
+        performSegue(withIdentifier: "ShowCategorySegue", sender: self)
+    }
+    @objc func OpenAllKPIsE(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.E
+        performSegue(withIdentifier: "ShowCategorySegue", sender: self)
+    }
+    @objc func OpenAllKPIsF(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.F
         performSegue(withIdentifier: "ShowCategorySegue", sender: self)
     }
     
-    @objc func OpenAllKPIs2(_ sender:UITapGestureRecognizer){
+    
+    
+    @objc func OpenAllKPIs2A(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.A
         performSegue(withIdentifier: "ShowMapSegue", sender: self)
     }
+    
+    @objc func OpenAllKPIs2B(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.B
+        performSegue(withIdentifier: "ShowMapSegue", sender: self)
+    }
+    
+    @objc func OpenAllKPIs2C(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.C
+        performSegue(withIdentifier: "ShowMapSegue", sender: self)
+    }
+    
+    @objc func OpenAllKPIs2D(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.D
+        performSegue(withIdentifier: "ShowMapSegue", sender: self)
+    }
+    
+    @objc func OpenAllKPIs2E(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.E
+        performSegue(withIdentifier: "ShowMapSegue", sender: self)
+    }
+    
+    @objc func OpenAllKPIs2F(_ sender:UITapGestureRecognizer){
+        LastCardTapped = FloatingCard.F
+        performSegue(withIdentifier: "ShowMapSegue", sender: self)
+    }
+    
+  
 
    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {

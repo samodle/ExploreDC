@@ -8,6 +8,7 @@ target "ExploreDC" do
       pod 'AWSMobileClient', '~> 2.6.13'  # For AWSMobileClient
       pod 'AWSS3', '~> 2.6.13'            # For file transfers
       pod 'AWSCognito', '~> 2.6.13'       # For data sync
+      pod 'AWSDynamoDB', '~> 2.6.13'
 
       # other pods
 

@@ -15,14 +15,40 @@ class VRTableViewController: UIViewController {
     
     @IBOutlet weak var mainPanoView: GVRPanoramaView!
     
+    //MARK: Variables
+    var lastCardClick: FloatingCard = FloatingCard.NA
+    
+    //MARK: View DidLoad/etc
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainPanoView.enableFullscreenButton = true
         mainPanoView.enableCardboardButton = true
         mainPanoView.enableInfoButton = false
-        mainPanoView.load(UIImage(named: "pano_scusD01.png"),
+        switch lastCardClick{
+        case FloatingCard.A:
+        mainPanoView.load(UIImage(named: "union.jpg"),
              of: GVRPanoramaImageType.mono)
+        case FloatingCard.B:
+            mainPanoView.load(UIImage(named: "garfield00.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.C:
+            mainPanoView.load(UIImage(named: "mall00.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.D:
+            mainPanoView.load(UIImage(named: "taft00.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.E:
+            mainPanoView.load(UIImage(named: "bible01.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.F:
+            mainPanoView.load(UIImage(named: "vets00.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case .NA:
+            mainPanoView.load(UIImage(named: "pano_scusD01.png"),
+                              of: GVRPanoramaImageType.mono)
+        }
+        
     }
     
     

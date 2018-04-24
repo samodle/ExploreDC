@@ -63,7 +63,7 @@ class VRViewController: UIViewController {
         videoVRView.isHidden = true
         imageVRView.load(UIImage(named: Media.photoArray.first!),
                          of: GVRPanoramaImageType.mono)
-        //imageVRView.
+
         imageVRView.enableCardboardButton = true
         imageVRView.enableFullscreenButton = true
         imageVRView.enableInfoButton = false

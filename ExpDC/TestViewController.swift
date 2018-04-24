@@ -1,5 +1,4 @@
 import UIKit
-
 import AWSCore
 import AWSS3
 
@@ -12,6 +11,7 @@ class TestViewController: UIViewController {
     @IBOutlet weak var littleBeeButton: UIButton!
     @IBOutlet weak var panoUnoView: GVRPanoramaView!
     @IBOutlet weak var progBar: UIProgressView!
+    @IBOutlet weak var dynamoTestButton: UIButton!
     
     @IBAction func buttonDownEvent(_ sender: Any) {
         self.progBar.isHidden=false
@@ -27,7 +27,16 @@ class TestViewController: UIViewController {
         panoUnoView.enableCardboardButton = true
         
     }
-
+    
+    @IBAction func startDynamoTest(_ sender: Any) {
+        
+        
+        
+        
+        
+        
+    }
+    
 func downloadData() {
     let expression = AWSS3TransferUtilityDownloadExpression()
     expression.progressBlock = {(task, progress) in DispatchQueue.main.async(execute: {

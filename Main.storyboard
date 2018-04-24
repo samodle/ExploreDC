@@ -71,6 +71,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="MainScreen"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhG-Oe-3Gc">
+                                <rect key="frame" x="117" y="576" width="180" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go To Other Home Screen"/>
+                                <connections>
+                                    <segue destination="tj8-Y7-zso" kind="show" id="m8C-vD-um1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -143,10 +151,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb4-P0-nOy">
-                                <rect key="frame" x="163" y="124" width="99" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-Dq-pqS">
+                                <rect key="frame" x="153" y="187" width="109" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="dynamoDB Test"/>
+                                <connections>
+                                    <action selector="startDynamoTest:" destination="5kx-fu-hcP" eventType="touchUpInside" id="S4K-U1-EzW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb4-P0-nOy">
+                                <rect key="frame" x="119" y="124" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="S3 Bucket Download Test"/>
                                 <connections>
                                     <action selector="buttonDownEvent:" destination="5kx-fu-hcP" eventType="touchDown" id="StC-FV-2sp"/>
                                 </connections>
@@ -155,6 +171,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="dynamoTestButton" destination="Vap-Dq-pqS" id="VJX-4e-QPM"/>
                         <outlet property="littleBeeButton" destination="Qb4-P0-nOy" id="fjZ-bC-LNp"/>
                         <outlet property="panoUnoView" destination="5dA-bG-Fgo" id="jin-HS-Rn5"/>
                         <outlet property="progBar" destination="qqM-9e-gF2" id="FDW-Nj-h8M"/>
@@ -162,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvs-S5-XR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="-68"/>
+            <point key="canvasLocation" x="1550.7246376811595" y="-68.478260869565219"/>
         </scene>
         <!--Slide Drawer View Controller-->
         <scene sceneID="MEP-Y5-dVk">
@@ -775,10 +792,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShortLogo_Alternate_whitebg" translatesAutoresizingMaskIntoConstraints="NO" id="J2a-QH-Akh">
-                                        <rect key="frame" x="20" y="19" width="374" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sroEDCxAsset 1@4x" translatesAutoresizingMaskIntoConstraints="NO" id="J2a-QH-Akh">
+                                        <rect key="frame" x="-546" y="21" width="1506" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="2kr-Zw-7l1"/>
+                                            <constraint firstAttribute="height" constant="35" id="wqQ-nM-NEH"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHI-QT-6ER">
@@ -796,15 +813,13 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="iHI-QT-6ER" firstAttribute="leading" secondItem="lcX-FU-Kek" secondAttribute="leading" constant="20" id="5Ab-cI-pDI"/>
-                                    <constraint firstItem="YBI-Kn-p6f" firstAttribute="top" secondItem="J2a-QH-Akh" secondAttribute="bottom" constant="14" id="8TW-qL-7T2"/>
+                                    <constraint firstItem="YBI-Kn-p6f" firstAttribute="top" secondItem="J2a-QH-Akh" secondAttribute="bottom" constant="14" id="8TW-qL-7T2" userLabel="MainMenuSegmentView.top = sroEDCxAsset 1@4x.bottom"/>
                                     <constraint firstItem="YBI-Kn-p6f" firstAttribute="leading" secondItem="lcX-FU-Kek" secondAttribute="leading" id="Hv1-mi-Z6j"/>
-                                    <constraint firstAttribute="trailing" secondItem="J2a-QH-Akh" secondAttribute="trailing" constant="20" id="M0y-qt-5sQ"/>
                                     <constraint firstAttribute="bottom" secondItem="YBI-Kn-p6f" secondAttribute="bottom" id="U2i-CM-ifx"/>
                                     <constraint firstAttribute="height" constant="100" id="YtW-Ly-UpL"/>
                                     <constraint firstItem="J2a-QH-Akh" firstAttribute="centerX" secondItem="lcX-FU-Kek" secondAttribute="centerX" id="bq3-wA-pep"/>
                                     <constraint firstAttribute="trailing" secondItem="YBI-Kn-p6f" secondAttribute="trailing" id="sxb-eL-Mfa"/>
                                     <constraint firstItem="YBI-Kn-p6f" firstAttribute="top" secondItem="iHI-QT-6ER" secondAttribute="bottom" constant="14" id="uCj-7H-fU6"/>
-                                    <constraint firstItem="J2a-QH-Akh" firstAttribute="leading" secondItem="lcX-FU-Kek" secondAttribute="leading" constant="20" id="xHV-zV-3ic"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -860,7 +875,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG2-vR-oKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2019" y="930"/>
+            <point key="canvasLocation" x="2018.840579710145" y="929.34782608695662"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="1yy-6h-VsT">
@@ -991,6 +1006,6 @@
     </scenes>
     <resources>
         <image name="LeftArrow_Back" width="35" height="35"/>
-        <image name="ShortLogo_Alternate_whitebg" width="141" height="141"/>
+        <image name="sroEDCxAsset 1@4x" width="1506" height="1888"/>
     </resources>
 </document>

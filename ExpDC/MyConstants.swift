@@ -15,6 +15,9 @@ let S3UploadKeyName: String = "test-image.png"      // Name of file to be upload
 
 let TriggerPitch: CGFloat = -70 //pitch at which the 'look down to trigger the UI' functionality executes
 
+public enum FloatingCard{
+    case A, B, C, D, E, F, NA
+}
 
 struct PublicConstants{
     //MARK: Card Size
