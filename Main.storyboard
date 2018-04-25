@@ -1016,6 +1016,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actualNavBarRip" destination="72b-mu-LEq" id="zTH-Ss-b0o"/>
                         <outlet property="mainPanoView" destination="TZJ-u1-NrS" id="rPI-dw-4EY"/>
                         <outlet property="myNavBar" destination="Lre-9n-z3k" id="yyQ-Wt-EHU"/>
                     </connections>

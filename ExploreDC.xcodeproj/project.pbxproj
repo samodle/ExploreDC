@@ -121,15 +121,15 @@
 				2279B31D207E604200D25E6A /* RubiconObjects */,
 				043BB7871CCD4CA5000521FC /* AppDelegate.swift */,
 				22BC4518207BD2F500DB1867 /* MyConstants.swift */,
+				22A01C782080DE9E00839214 /* gvrTableViewCell.swift */,
 				22F77F3C207D082800317850 /* VCs */,
 				0473CA6B1CF13E2300926B6C /* 360 Images */,
 				0477669B1CCD53A500F3F8FC /* Main.storyboard */,
-				043BB7901CCD4CA5000521FC /* LaunchScreen.storyboard */,
 				043BB78E1CCD4CA5000521FC /* Assets.xcassets */,
 				2212E6AE2050B5E9002FCB7B /* ExploreDC.entitlements */,
 				22AFB4C52077A27200AA845A /* awsconfiguration.json */,
+				043BB7901CCD4CA5000521FC /* LaunchScreen.storyboard */,
 				043BB7931CCD4CA5000521FC /* Info.plist */,
-				22A01C782080DE9E00839214 /* gvrTableViewCell.swift */,
 			);
 			path = ExpDC;
 			sourceTree = "<group>";
