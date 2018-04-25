@@ -14,6 +14,7 @@
 		0477669C1CCD53A500F3F8FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0477669B1CCD53A500F3F8FC /* Main.storyboard */; };
 		0B1A1869038514B80CC756E6 /* Pods_ExploreDC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B84143F29DE4E7F434CC61B /* Pods_ExploreDC.framework */; };
 		22035C3D2077CA9800D675FE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22035C3C2077CA9800D675FE /* TestViewController.swift */; };
+		224A911E2090D66600859A0A /* CustomTblObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A911D2090D66600859A0A /* CustomTblObject.swift */; };
 		22663D8B207D7073004D0D38 /* SlideDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */; };
 		2279B31F207E606800D25E6A /* RubiconLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279B31E207E606800D25E6A /* RubiconLocation.swift */; };
 		2279B321207E67A400D25E6A /* LocationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279B320207E67A400D25E6A /* LocationAdapter.swift */; };
@@ -56,6 +57,7 @@
 		0477669B1CCD53A500F3F8FC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		22035C3C2077CA9800D675FE /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2212E6AE2050B5E9002FCB7B /* ExploreDC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExploreDC.entitlements; sourceTree = "<group>"; };
+		224A911D2090D66600859A0A /* CustomTblObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTblObject.swift; sourceTree = "<group>"; };
 		22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideDrawerViewController.swift; sourceTree = "<group>"; };
 		2279B31E207E606800D25E6A /* RubiconLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubiconLocation.swift; sourceTree = "<group>"; };
 		2279B320207E67A400D25E6A /* LocationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAdapter.swift; sourceTree = "<group>"; };
@@ -124,12 +126,14 @@
 				22A01C782080DE9E00839214 /* gvrTableViewCell.swift */,
 				22F77F3C207D082800317850 /* VCs */,
 				0473CA6B1CF13E2300926B6C /* 360 Images */,
+				224A911C2090D18700859A0A /* TableImages */,
 				0477669B1CCD53A500F3F8FC /* Main.storyboard */,
 				043BB78E1CCD4CA5000521FC /* Assets.xcassets */,
 				2212E6AE2050B5E9002FCB7B /* ExploreDC.entitlements */,
 				22AFB4C52077A27200AA845A /* awsconfiguration.json */,
 				043BB7901CCD4CA5000521FC /* LaunchScreen.storyboard */,
 				043BB7931CCD4CA5000521FC /* Info.plist */,
+				224A911D2090D66600859A0A /* CustomTblObject.swift */,
 			);
 			path = ExpDC;
 			sourceTree = "<group>";
@@ -157,6 +161,13 @@
 				22AE3810201FFDC600BE939F /* Vacation 360-Bridging-Header.h */,
 			);
 			name = "360 Images";
+			sourceTree = "<group>";
+		};
+		224A911C2090D18700859A0A /* TableImages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableImages;
 			sourceTree = "<group>";
 		};
 		2279B31D207E604200D25E6A /* RubiconObjects */ = {
@@ -391,6 +402,7 @@
 				22035C3D2077CA9800D675FE /* TestViewController.swift in Sources */,
 				2279B321207E67A400D25E6A /* LocationAdapter.swift in Sources */,
 				22CF14DA207D391700EE0035 /* SMBasicSegment.swift in Sources */,
+				224A911E2090D66600859A0A /* CustomTblObject.swift in Sources */,
 				22CF14DC207D391700EE0035 /* SMSegment.swift in Sources */,
 				22CF14DB207D391700EE0035 /* SMSegmentView.swift in Sources */,
 				043BB7881CCD4CA5000521FC /* AppDelegate.swift in Sources */,
