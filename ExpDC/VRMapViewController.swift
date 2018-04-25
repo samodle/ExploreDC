@@ -15,10 +15,11 @@ class VRMapViewController: UIViewController {
     var currentDisplayMode = GVRWidgetDisplayMode.embedded
     
     @IBOutlet weak var mainPanoView: GVRPanoramaView!
-    
+
     //MARK: Variables
     var lastCardClick: FloatingCard = FloatingCard.NA
     @IBOutlet weak var myMapView: MKMapView!
+    @IBOutlet weak var myNavBar: UINavigationItem!
     
     //MARK: INIT
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class VRMapViewController: UIViewController {
         mainPanoView.enableFullscreenButton = true
         mainPanoView.enableCardboardButton = true
         mainPanoView.enableInfoButton = false
+        mainPanoView.hidesTransitionView = VR_hidesTransitionView
         mainPanoView.load(UIImage(named: "taft00.jpg"),
                           of: GVRPanoramaImageType.mono)
         
@@ -35,6 +37,47 @@ class VRMapViewController: UIViewController {
         let initialLocation = CLLocation(latitude: 38.9072, longitude: -77.1369)
         centerMapOnLocation(location: initialLocation,mKmV: myMapView,regionRadius: regionRadius)
         
+        
+        let x: CGFloat = 15
+        
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage(named: "LeftArrow_Beck"), for: UIControlState.normal)
+        button.addTarget(self, action: #selector(VRTableViewController.LesGoHomeDawg(_:)), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: x, height: x)
+        let barButton = UIBarButtonItem(customView: button)
+        myNavBar.leftBarButtonItem = barButton
+        
+        
+        switch lastCardClick{
+        case FloatingCard.A:
+            myNavBar.title = "National Mall"
+            mainPanoView.load(UIImage(named: "union.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.B:
+            myNavBar.title = "Northwest Quadrant"
+            mainPanoView.load(UIImage(named: "garfield00.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.C:
+            myNavBar.title = "South"
+            mainPanoView.load(UIImage(named: "mall00.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.D:
+            myNavBar.title = "Capitol Hill"
+            mainPanoView.load(UIImage(named: "taft00.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.E:
+            myNavBar.title = "Waterfront"
+            mainPanoView.load(UIImage(named: "bible01.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case FloatingCard.F:
+            myNavBar.title = "Houston"
+            mainPanoView.load(UIImage(named: "vets00.jpg"),
+                              of: GVRPanoramaImageType.mono)
+        case .NA:
+            myNavBar.title = "error"
+            mainPanoView.load(UIImage(named: "pano_scusD01.png"),
+                              of: GVRPanoramaImageType.mono)
+        }
     }
     
     
@@ -46,6 +89,11 @@ class VRMapViewController: UIViewController {
         mKmV.setRegion(coordinateRegion, animated: true)
     }
     
+    //MARK: Navigation
+    @objc func LesGoHomeDawg(_ sender:UITapGestureRecognizer){
+        dismiss(animated: true, completion: nil)
+        // performSegue(withIdentifier: "TableToMainSegue", sender: self)
+    }
     
 }
 

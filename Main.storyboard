@@ -923,6 +923,7 @@
                     <connections>
                         <outlet property="mainPanoView" destination="K6i-Vl-H22" id="VCa-iw-px8"/>
                         <outlet property="myMapView" destination="1Yj-Mq-S8q" id="b2P-oQ-gWV"/>
+                        <outlet property="myNavBar" destination="3lA-OY-gOB" id="ssD-Lh-PfL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilf-op-mGW" userLabel="First Responder" sceneMemberID="firstResponder"/>

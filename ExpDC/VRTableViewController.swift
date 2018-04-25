@@ -54,6 +54,7 @@ class VRTableViewController: UIViewController {
         mainPanoView.enableFullscreenButton = true
         mainPanoView.enableCardboardButton = true
         mainPanoView.enableInfoButton = false
+        mainPanoView.hidesTransitionView = VR_hidesTransitionView
         switch lastCardClick{
         case FloatingCard.A:
             myNavBar.title = "Memorials/Monuments"
