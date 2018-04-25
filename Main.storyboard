@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xp1-U0-BAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-68"/>
+            <point key="canvasLocation" x="474" y="174"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="X2G-yN-FRn">
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvs-S5-XR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550.7246376811595" y="-68.478260869565219"/>
+            <point key="canvasLocation" x="1190" y="174"/>
         </scene>
         <!--Slide Drawer View Controller-->
         <scene sceneID="MEP-Y5-dVk">
@@ -869,8 +869,8 @@
                         <outlet property="panoCardD" destination="ZHx-rf-3p1" id="GMd-fm-qvT"/>
                         <outlet property="panoCardE" destination="9Aq-rp-njY" id="Opy-Tm-xzY"/>
                         <outlet property="panoCardF" destination="f0v-1F-45v" id="ARf-W4-Usm"/>
-                        <segue destination="epG-fa-1iD" kind="show" identifier="ShowCategorySegue" id="zMh-mT-5ET"/>
                         <segue destination="vv6-IC-ghp" kind="show" identifier="ShowMapSegue" id="cKf-K1-Gg3"/>
+                        <segue destination="epG-fa-1iD" kind="show" identifier="ShowCategorySegue" id="xKB-tB-zW5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG2-vR-oKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -889,23 +889,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-ue-eS0">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Maps, Yo!" id="3lA-OY-gOB"/>
+                                </items>
+                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6i-Vl-H22" customClass="GVRPanoramaView">
-                                <rect key="frame" x="25" y="25" width="364" height="350"/>
+                                <rect key="frame" x="25" y="69" width="364" height="350"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="mZT-hr-z3Q"/>
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Yj-Mq-S8q">
-                                <rect key="frame" x="25" y="385" width="364" height="346"/>
+                                <rect key="frame" x="25" y="429" width="364" height="302"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="g4I-ue-eS0" firstAttribute="top" secondItem="Zz8-EQ-vLF" secondAttribute="bottom" id="4ev-6l-Ecr"/>
                             <constraint firstItem="1Yj-Mq-S8q" firstAttribute="leading" secondItem="K6i-Vl-H22" secondAttribute="leading" id="9L7-my-wdz"/>
+                            <constraint firstItem="g4I-ue-eS0" firstAttribute="leading" secondItem="WJp-Yx-ijp" secondAttribute="leading" id="BEo-sq-orH"/>
+                            <constraint firstAttribute="trailing" secondItem="g4I-ue-eS0" secondAttribute="trailing" id="P5H-IE-PYp"/>
+                            <constraint firstItem="K6i-Vl-H22" firstAttribute="top" secondItem="g4I-ue-eS0" secondAttribute="bottom" constant="5" id="UXf-ac-lOA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K6i-Vl-H22" secondAttribute="trailing" constant="5" id="VRb-AZ-y6R"/>
                             <constraint firstItem="1Yj-Mq-S8q" firstAttribute="top" secondItem="K6i-Vl-H22" secondAttribute="bottom" constant="10" id="ZgU-k3-LlP"/>
-                            <constraint firstItem="K6i-Vl-H22" firstAttribute="top" secondItem="Zz8-EQ-vLF" secondAttribute="bottom" constant="5" id="ir5-Yo-rXx"/>
                             <constraint firstItem="gkh-2y-5ra" firstAttribute="top" secondItem="1Yj-Mq-S8q" secondAttribute="bottom" constant="5" id="oAB-d6-Rvd"/>
                             <constraint firstItem="1Yj-Mq-S8q" firstAttribute="trailing" secondItem="K6i-Vl-H22" secondAttribute="trailing" id="t7F-BN-yQv"/>
                             <constraint firstItem="K6i-Vl-H22" firstAttribute="leading" secondItem="WJp-Yx-ijp" secondAttribute="leadingMargin" constant="5" id="wh3-Yc-aZM"/>
@@ -918,7 +927,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilf-op-mGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3084" y="1281"/>
+            <point key="canvasLocation" x="2786.9565217391305" y="1338.5869565217392"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ISf-vg-qLk">
@@ -932,8 +941,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72b-mu-LEq">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Tables, Yo!" id="Lre-9n-z3k">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="VOn-48-Jy4"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZJ-u1-NrS" customClass="GVRPanoramaView">
-                                <rect key="frame" x="25" y="25" width="374" height="250"/>
+                                <rect key="frame" x="22" y="69" width="374" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="tSv-oa-o9J"/>
@@ -986,22 +1003,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="top" secondItem="yTo-Lq-Xgz" secondAttribute="bottom" constant="5" id="6fK-to-sO4"/>
-                            <constraint firstItem="iwO-nf-Bjx" firstAttribute="top" secondItem="TZJ-u1-NrS" secondAttribute="bottom" constant="10" id="Ys2-sJ-Wym"/>
-                            <constraint firstItem="ctN-EG-9QB" firstAttribute="top" secondItem="iwO-nf-Bjx" secondAttribute="bottom" constant="10" id="e5i-zv-oOg"/>
+                            <constraint firstAttribute="trailing" secondItem="72b-mu-LEq" secondAttribute="trailing" id="Uce-cr-zSI"/>
+                            <constraint firstItem="iwO-nf-Bjx" firstAttribute="top" secondItem="TZJ-u1-NrS" secondAttribute="bottom" constant="10" id="Ys2-sJ-Wym" userLabel="Table View.top = Main Pano View.bottom + 5"/>
+                            <constraint firstItem="ctN-EG-9QB" firstAttribute="top" secondItem="iwO-nf-Bjx" secondAttribute="bottom" constant="10" id="e5i-zv-oOg" userLabel="Bottom Layout Guide.top = Table View.bottom + 5"/>
+                            <constraint firstItem="72b-mu-LEq" firstAttribute="top" secondItem="yTo-Lq-Xgz" secondAttribute="bottom" id="eX8-7X-0HA"/>
+                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="top" secondItem="72b-mu-LEq" secondAttribute="bottom" constant="5" id="gim-7m-Zyj"/>
                             <constraint firstItem="iwO-nf-Bjx" firstAttribute="trailing" secondItem="TZJ-u1-NrS" secondAttribute="trailing" id="jBY-Dk-5sf"/>
-                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="trailing" secondItem="vsc-qN-2mO" secondAttribute="trailingMargin" constant="5" id="kZD-zX-M0U"/>
+                            <constraint firstItem="72b-mu-LEq" firstAttribute="leading" secondItem="vsc-qN-2mO" secondAttribute="leading" id="jeK-hd-deI"/>
+                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="trailing" secondItem="vsc-qN-2mO" secondAttribute="trailingMargin" constant="2" id="kZD-zX-M0U"/>
                             <constraint firstItem="iwO-nf-Bjx" firstAttribute="leading" secondItem="TZJ-u1-NrS" secondAttribute="leading" id="lhJ-0f-cfP"/>
-                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="leading" secondItem="vsc-qN-2mO" secondAttribute="leadingMargin" constant="5" id="yk7-v1-fKZ"/>
+                            <constraint firstItem="TZJ-u1-NrS" firstAttribute="leading" secondItem="vsc-qN-2mO" secondAttribute="leadingMargin" constant="2" id="yk7-v1-fKZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mainPanoView" destination="TZJ-u1-NrS" id="rPI-dw-4EY"/>
+                        <outlet property="myNavBar" destination="Lre-9n-z3k" id="yyQ-Wt-EHU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgw-d2-J78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3082.608695652174" y="575.54347826086962"/>
+            <point key="canvasLocation" x="2787" y="642"/>
         </scene>
     </scenes>
     <resources>

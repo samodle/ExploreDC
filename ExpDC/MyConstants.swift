@@ -19,6 +19,10 @@ public enum FloatingCard{
     case A, B, C, D, E, F, NA
 }
 
+//MARK: Settings
+let VR_hidesTransitionView: Bool = true
+
+
 struct PublicConstants{
     //MARK: Card Size
     static let BigScreenCutoff: CGFloat = 750 //750

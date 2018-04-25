@@ -123,36 +123,42 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         panoCardA.enableInfoButton = false
         panoCardA.enableFullscreenButton = false
         panoCardA.enableCardboardButton = false
+        panoCardA.hidesTransitionView = VR_hidesTransitionView
         panoCardA.load(UIImage(named: Media.photoArray.first!),
                            of: GVRPanoramaImageType.mono)
         
         panoCardB.enableInfoButton = false
         panoCardB.enableFullscreenButton = false
         panoCardB.enableCardboardButton = false
+         panoCardB.hidesTransitionView = VR_hidesTransitionView
         panoCardB.load(UIImage(named: Media.photoArray.last!),
                            of: GVRPanoramaImageType.mono)
 
         panoCardC.enableInfoButton = false
         panoCardC.enableFullscreenButton = false
         panoCardC.enableCardboardButton = false
+         panoCardC.hidesTransitionView = VR_hidesTransitionView
         panoCardC.load(UIImage(named: Media.photoArray[1]),
                            of: GVRPanoramaImageType.mono)
         
         panoCardD.enableInfoButton = false
         panoCardD.enableFullscreenButton = false
         panoCardD.enableCardboardButton = false
+         panoCardD.hidesTransitionView = VR_hidesTransitionView
         panoCardD.load(UIImage(named: Media.photoArray[2]),
                        of: GVRPanoramaImageType.mono)
         
         panoCardE.enableInfoButton = false
         panoCardE.enableFullscreenButton = false
         panoCardE.enableCardboardButton = false
+         panoCardE.hidesTransitionView = VR_hidesTransitionView
         panoCardE.load(UIImage(named: Media.photoArray[3]),
                        of: GVRPanoramaImageType.mono)
         
         panoCardF.enableInfoButton = false
         panoCardF.enableFullscreenButton = false
         panoCardF.enableCardboardButton = false
+         panoCardF.hidesTransitionView = VR_hidesTransitionView
         panoCardF.load(UIImage(named: Media.photoArray[4]),
                        of: GVRPanoramaImageType.mono)
         
@@ -240,6 +246,10 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         if segue.identifier == "ShowCategorySegue" { //this means we are gonna do drugs. right? right guys?
 
             let toolPageViewController = segue.destination as! VRTableViewController
+            toolPageViewController.lastCardClick = LastCardTapped
+        }
+        else if segue.identifier == "ShowMapSegue"{
+            let toolPageViewController = segue.destination as! VRMapViewController
             toolPageViewController.lastCardClick = LastCardTapped
         }
     }

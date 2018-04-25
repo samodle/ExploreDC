@@ -16,6 +16,8 @@ class VRMapViewController: UIViewController {
     
     @IBOutlet weak var mainPanoView: GVRPanoramaView!
     
+    //MARK: Variables
+    var lastCardClick: FloatingCard = FloatingCard.NA
     @IBOutlet weak var myMapView: MKMapView!
     
     //MARK: INIT

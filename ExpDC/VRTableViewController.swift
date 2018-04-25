@@ -5,7 +5,6 @@
 //  Created by sam on 4/13/18.
 //  Copyright © 2018 Rubicon. All rights reserved.
 //
-
 import Foundation
 
 class VRTableViewController: UIViewController {
@@ -17,11 +16,18 @@ class VRTableViewController: UIViewController {
     
     //MARK: Variables
     var lastCardClick: FloatingCard = FloatingCard.NA
+    @IBOutlet weak var myNavBar: UINavigationItem!
     
     //MARK: View DidLoad/etc
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // myNavBar.leftBarButtonItem = navigationItem.backBarButtonItem
+        let navBarbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.undo, target: self, action: #selector(VRTableViewController.LesGoHomeDawg(_:)))
+        myNavBar.leftBarButtonItem = navBarbutton
+        
+        
+        //pano init
         mainPanoView.enableFullscreenButton = true
         mainPanoView.enableCardboardButton = true
         mainPanoView.enableInfoButton = false
@@ -51,6 +57,28 @@ class VRTableViewController: UIViewController {
         
     }
     
+    
+    //MARK: Navigation
+    
+    @IBAction func dismissVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func LesGoHomeDawg(_ sender:UITapGestureRecognizer){
+        dismiss(animated: true, completion: nil)
+       // performSegue(withIdentifier: "TableToMainSegue", sender: self)
+    }
+    
+    //not using dis
+    func addBackButton() {
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage(named: "LeftArrow_Back.png"), for: .normal)
+        backButton.setTitle("  Back", for: .normal)
+        backButton.setTitleColor(backButton.tintColor, for: .normal) // You can change the TitleColor
+    //    backButton.addTarget(self, action: #selector(self.backAction(_:)),A for: .touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+    }
     
 }
 
