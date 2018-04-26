@@ -14,12 +14,13 @@ class PlaceScene {
     
     var title: String
     var subtitle: String
-    var photo: UIImage?
-    var photo2: UIImage?
+    var photo: String
+    var photo2: String
+    var photoVR: String
     
     //MARK: Initialization
     
-    init?(title: String, substit: String, photo: UIImage?, pic2: UIImage?) {
+    init?(title: String, substit: String, photo: String, pic2: String, photoVR: String) {
         
         // The name must not be empty
         guard !title.isEmpty else {
@@ -36,6 +37,7 @@ class PlaceScene {
         self.photo = photo
         self.photo2 = pic2
         self.subtitle = substit
+        self.photoVR = photoVR
         
     }
 }

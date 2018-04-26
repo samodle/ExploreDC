@@ -15,6 +15,7 @@
 		0B1A1869038514B80CC756E6 /* Pods_ExploreDC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B84143F29DE4E7F434CC61B /* Pods_ExploreDC.framework */; };
 		22035C3D2077CA9800D675FE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22035C3C2077CA9800D675FE /* TestViewController.swift */; };
 		22396E7920913C0600CC0CBC /* TempLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22396E7820913C0600CC0CBC /* TempLaunchViewController.swift */; };
+		22396E7B2092157200CC0CBC /* SharedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22396E7A2092157200CC0CBC /* SharedFunctions.swift */; };
 		224A911E2090D66600859A0A /* CustomTblObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A911D2090D66600859A0A /* CustomTblObject.swift */; };
 		22663D8B207D7073004D0D38 /* SlideDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */; };
 		2279B31F207E606800D25E6A /* RubiconLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279B31E207E606800D25E6A /* RubiconLocation.swift */; };
@@ -59,6 +60,7 @@
 		22035C3C2077CA9800D675FE /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2212E6AE2050B5E9002FCB7B /* ExploreDC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExploreDC.entitlements; sourceTree = "<group>"; };
 		22396E7820913C0600CC0CBC /* TempLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempLaunchViewController.swift; sourceTree = "<group>"; };
+		22396E7A2092157200CC0CBC /* SharedFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctions.swift; sourceTree = "<group>"; };
 		224A911D2090D66600859A0A /* CustomTblObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTblObject.swift; sourceTree = "<group>"; };
 		22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideDrawerViewController.swift; sourceTree = "<group>"; };
 		2279B31E207E606800D25E6A /* RubiconLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubiconLocation.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				2279B31D207E604200D25E6A /* RubiconObjects */,
 				043BB7871CCD4CA5000521FC /* AppDelegate.swift */,
 				22BC4518207BD2F500DB1867 /* MyConstants.swift */,
+				22396E7A2092157200CC0CBC /* SharedFunctions.swift */,
 				22A01C782080DE9E00839214 /* gvrTableViewCell.swift */,
 				224A911D2090D66600859A0A /* CustomTblObject.swift */,
 				22F77F3C207D082800317850 /* VCs */,
@@ -409,6 +412,7 @@
 				224A911E2090D66600859A0A /* CustomTblObject.swift in Sources */,
 				22CF14DC207D391700EE0035 /* SMSegment.swift in Sources */,
 				22CF14DB207D391700EE0035 /* SMSegmentView.swift in Sources */,
+				22396E7B2092157200CC0CBC /* SharedFunctions.swift in Sources */,
 				043BB7881CCD4CA5000521FC /* AppDelegate.swift in Sources */,
 				22BC451B207BD2F500DB1867 /* MyConstants.swift in Sources */,
 				2279B31F207E606800D25E6A /* RubiconLocation.swift in Sources */,

@@ -38,18 +38,8 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         // This view controller itself will provide the delegate methods and row data for the table view.
         daTableView.delegate = self
         daTableView.dataSource = self
-/*
-        let navBarbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.rewind, target: self, action: #selector(VRTableViewController.LesGoHomeDawg(_:)))
-   */
-        
-        /*
-                let navBarbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.rewind, target: self, action: #selector(VRTableViewController.LesGoHomeDawg(_:)))
-        navBarbutton.image = UIImage(named: "LeftArrow_Back")
-        myNavBar.leftBarButtonItem?.image = UIImage(named: "LeftArrow_Back")
-        myNavBar.leftBarButtonItem = navBarbutton
- */
+
         let x: CGFloat = 15
- 
         let button = UIButton.init(type: .custom)
         //set image for button
         button.setImage(UIImage(named: "LeftArrow_Beck"), for: UIControlState.normal)
@@ -97,13 +87,10 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
             mainPanoView.load(UIImage(named: "vets00.jpg"),
                               of: GVRPanoramaImageType.mono)
         case .NA:
-              myNavBar.title = "error"
-            mainPanoView.load(UIImage(named: "pano_scusD01.png"),
-                              of: GVRPanoramaImageType.mono)
+              break
         }
         
     }
-    
     
     //MARK: Navigation
     @objc func LesGoHomeDawg(_ sender:UITapGestureRecognizer){
@@ -137,8 +124,8 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         // set the text from the data model
         cell.primaryTextLabel?.text = self.animals[indexPath.row].title
         cell.secondaryTextLabel?.text = self.animals[indexPath.row].subtitle
-        cell.primaryImageView?.image = self.animals[indexPath.row].photo
-        cell.secondaryImageView?.image = self.animals[indexPath.row].photo2
+        cell.primaryImageView?.image = UIImage(named: self.animals[indexPath.row].photo)
+        cell.secondaryImageView?.image = UIImage(named:self.animals[indexPath.row].photo2)
         
         return cell
     }
@@ -146,11 +133,11 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        mainPanoView.load(UIImage(named: animals[indexPath.row].photoVR),
+                          of: GVRPanoramaImageType.mono)
+        
     }
-    
 }
-
-
 
 //MARK: VR Extension
 extension VRTableViewController: GVRWidgetViewDelegate {
