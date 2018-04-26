@@ -168,7 +168,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         
         segmentView?.delegate = self
         segmentView?.addSegmentWithTitle("By Category")
-        segmentView?.addSegmentWithTitle("By Area")
+        segmentView?.addSegmentWithTitle("Map")
 
         segmentView?.selectSegmentAtIndex(0)
 
@@ -247,6 +247,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
 
             let toolPageViewController = segue.destination as! VRTableViewController
             toolPageViewController.lastCardClick = LastCardTapped
+            toolPageViewController.animals = getVRTableData(thingy: LastCardTapped)
         }
         else if segue.identifier == "ShowMapSegue"{
             let toolPageViewController = segue.destination as! VRMapViewController

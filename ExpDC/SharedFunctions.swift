@@ -10,20 +10,31 @@ import Foundation
 
 func getVRTableData(thingy: FloatingCard) -> [PlaceScene]{
     var x = [PlaceScene]()
+    var iconName: String
     
     switch thingy{
     case FloatingCard.A:
-        x.append(PlaceScene(title: "",substit: "",photo: "",pic2: "",photoVR: "")!)
+        iconName = "monu.png"
+        x.append(PlaceScene(title: "Botanical Garden",substit: "this is muh subtitle",photo: "tomb.png",pic2: iconName,photoVR: "bg01.jpg")!)
+         x.append(PlaceScene(title: "Botanical Garden",substit: "this is muh subtitle",photo: "tomb.png",pic2: iconName,photoVR: "bg02.jpg")!)
+         x.append(PlaceScene(title: "Botanical Garden",substit: "this is muh subtitle",photo: "tomb.png",pic2: iconName,photoVR: "bg03.jpg")!)
     case FloatingCard.B:
-        x.append(PlaceScene(title: "",substit: "",photo: "",pic2: "",photoVR: "")!)
+        iconName = "capi.png"
+        x.append(PlaceScene(title: "Taft Carrilon",substit: "this is muh subtitle",photo: "tomb.png",pic2: iconName,photoVR: "taft00.jpg")!)
     case FloatingCard.C:
-        x.append(PlaceScene(title: "",substit: "",photo: "",pic2: "",photoVR: "")!)
+        iconName = "muse.png"
+        x.append(PlaceScene(title: "Museum of the Bible",substit: "this is muh subtitle",photo: "capi.png",pic2: iconName,photoVR: "bible00.jpg")!)
+          x.append(PlaceScene(title: "Museum of the Bible",substit: "this is muh subtitle",photo: "tree.png",pic2: iconName,photoVR: "bible01.jpg")!)
+          x.append(PlaceScene(title: "Museum of the Bible",substit: "this is muh subtitle",photo: "prot.png",pic2: iconName,photoVR: "bible02.jpg")!)
     case FloatingCard.D:
-        x.append(PlaceScene(title: "",substit: "",photo: "",pic2: "",photoVR: "")!)
+        iconName = "prot.png"
+        x.append(PlaceScene(title: "Women's March",substit: "Feb 27, 2019",photo: "tree.png",pic2: iconName,photoVR: "union.jpg")!)
     case FloatingCard.E:
-        x.append(PlaceScene(title: "",substit: "",photo: "",pic2: "",photoVR: "")!)
+        iconName = "tomb.png"
+        x.append(PlaceScene(title: "oops",substit: "this is muh subtitle",photo: "capi.png",pic2: iconName,photoVR: "verizon01.jpg")!)
     case FloatingCard.F:
-        x.append(PlaceScene(title: "",substit: "",photo: "",pic2: "",photoVR: "")!)
+        iconName = "tree.png"
+        x.append(PlaceScene(title: "The Wharf",substit: "Annual Christmas light boat parade",photo: "prot.png",pic2: iconName,photoVR: "wharf.jpg")!)
     case .NA:
         break
     }

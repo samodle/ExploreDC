@@ -16,6 +16,12 @@
 		22035C3D2077CA9800D675FE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22035C3C2077CA9800D675FE /* TestViewController.swift */; };
 		22396E7920913C0600CC0CBC /* TempLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22396E7820913C0600CC0CBC /* TempLaunchViewController.swift */; };
 		22396E7B2092157200CC0CBC /* SharedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22396E7A2092157200CC0CBC /* SharedFunctions.swift */; };
+		22396E822092245400CC0CBC /* tomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E7C2092245300CC0CBC /* tomb.png */; };
+		22396E832092245400CC0CBC /* capi.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E7D2092245300CC0CBC /* capi.png */; };
+		22396E842092245400CC0CBC /* muse.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E7E2092245400CC0CBC /* muse.png */; };
+		22396E852092245400CC0CBC /* prot.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E7F2092245400CC0CBC /* prot.png */; };
+		22396E862092245400CC0CBC /* monu.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E802092245400CC0CBC /* monu.png */; };
+		22396E872092245400CC0CBC /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E812092245400CC0CBC /* tree.png */; };
 		224A911E2090D66600859A0A /* CustomTblObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A911D2090D66600859A0A /* CustomTblObject.swift */; };
 		22663D8B207D7073004D0D38 /* SlideDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */; };
 		2279B31F207E606800D25E6A /* RubiconLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279B31E207E606800D25E6A /* RubiconLocation.swift */; };
@@ -36,7 +42,6 @@
 		2289BE682050C85600DF815E /* bg03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2289BE572050C85600DF815E /* bg03.jpg */; };
 		2289BE692050C85600DF815E /* mall02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2289BE582050C85600DF815E /* mall02.jpg */; };
 		2289BE6A2050C85600DF815E /* verizon00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2289BE592050C85600DF815E /* verizon00.jpg */; };
-		22A01C792080DE9E00839214 /* gvrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A01C782080DE9E00839214 /* gvrTableViewCell.swift */; };
 		22A01C7B2080E0FF00839214 /* VRTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A01C7A2080E0FF00839214 /* VRTableViewController.swift */; };
 		22A01C7D2080EA3A00839214 /* pano_scusD01.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A01C7C2080EA3A00839214 /* pano_scusD01.png */; };
 		22A01C7F2080EDEB00839214 /* VRMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A01C7E2080EDEB00839214 /* VRMapViewController.swift */; };
@@ -61,6 +66,12 @@
 		2212E6AE2050B5E9002FCB7B /* ExploreDC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExploreDC.entitlements; sourceTree = "<group>"; };
 		22396E7820913C0600CC0CBC /* TempLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempLaunchViewController.swift; sourceTree = "<group>"; };
 		22396E7A2092157200CC0CBC /* SharedFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctions.swift; sourceTree = "<group>"; };
+		22396E7C2092245300CC0CBC /* tomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomb.png; sourceTree = "<group>"; };
+		22396E7D2092245300CC0CBC /* capi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = capi.png; sourceTree = "<group>"; };
+		22396E7E2092245400CC0CBC /* muse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = muse.png; sourceTree = "<group>"; };
+		22396E7F2092245400CC0CBC /* prot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prot.png; sourceTree = "<group>"; };
+		22396E802092245400CC0CBC /* monu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monu.png; sourceTree = "<group>"; };
+		22396E812092245400CC0CBC /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		224A911D2090D66600859A0A /* CustomTblObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTblObject.swift; sourceTree = "<group>"; };
 		22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideDrawerViewController.swift; sourceTree = "<group>"; };
 		2279B31E207E606800D25E6A /* RubiconLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubiconLocation.swift; sourceTree = "<group>"; };
@@ -81,7 +92,6 @@
 		2289BE572050C85600DF815E /* bg03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg03.jpg; sourceTree = "<group>"; };
 		2289BE582050C85600DF815E /* mall02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mall02.jpg; sourceTree = "<group>"; };
 		2289BE592050C85600DF815E /* verizon00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = verizon00.jpg; sourceTree = "<group>"; };
-		22A01C782080DE9E00839214 /* gvrTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gvrTableViewCell.swift; sourceTree = "<group>"; };
 		22A01C7A2080E0FF00839214 /* VRTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRTableViewController.swift; sourceTree = "<group>"; };
 		22A01C7C2080EA3A00839214 /* pano_scusD01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pano_scusD01.png; sourceTree = "<group>"; };
 		22A01C7E2080EDEB00839214 /* VRMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRMapViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +138,6 @@
 				043BB7871CCD4CA5000521FC /* AppDelegate.swift */,
 				22BC4518207BD2F500DB1867 /* MyConstants.swift */,
 				22396E7A2092157200CC0CBC /* SharedFunctions.swift */,
-				22A01C782080DE9E00839214 /* gvrTableViewCell.swift */,
 				224A911D2090D66600859A0A /* CustomTblObject.swift */,
 				22F77F3C207D082800317850 /* VCs */,
 				0473CA6B1CF13E2300926B6C /* 360 Images */,
@@ -171,6 +180,12 @@
 		224A911C2090D18700859A0A /* TableImages */ = {
 			isa = PBXGroup;
 			children = (
+				22396E7D2092245300CC0CBC /* capi.png */,
+				22396E802092245400CC0CBC /* monu.png */,
+				22396E7E2092245400CC0CBC /* muse.png */,
+				22396E7F2092245400CC0CBC /* prot.png */,
+				22396E7C2092245300CC0CBC /* tomb.png */,
+				22396E812092245400CC0CBC /* tree.png */,
 			);
 			path = TableImages;
 			sourceTree = "<group>";
@@ -296,17 +311,22 @@
 			files = (
 				22A01C7D2080EA3A00839214 /* pano_scusD01.png in Resources */,
 				043BB7921CCD4CA5000521FC /* LaunchScreen.storyboard in Resources */,
+				22396E872092245400CC0CBC /* tree.png in Resources */,
 				043BB78F1CCD4CA5000521FC /* Assets.xcassets in Resources */,
 				2289BE622050C85600DF815E /* bible01.jpg in Resources */,
 				2289BE632050C85600DF815E /* taft00.jpg in Resources */,
+				22396E842092245400CC0CBC /* muse.png in Resources */,
 				2289BE6A2050C85600DF815E /* verizon00.jpg in Resources */,
+				22396E832092245400CC0CBC /* capi.png in Resources */,
 				2289BE5C2050C85600DF815E /* vets00.jpg in Resources */,
 				2289BE5B2050C85600DF815E /* mall01.jpg in Resources */,
 				22AFB4C62077A27200AA845A /* awsconfiguration.json in Resources */,
 				2289BE602050C85600DF815E /* bible02.jpg in Resources */,
 				2289BE692050C85600DF815E /* mall02.jpg in Resources */,
+				22396E822092245400CC0CBC /* tomb.png in Resources */,
 				2289BE5E2050C85600DF815E /* bg02.jpg in Resources */,
 				2289BE642050C85600DF815E /* verizon01.jpg in Resources */,
+				22396E852092245400CC0CBC /* prot.png in Resources */,
 				2289BE682050C85600DF815E /* bg03.jpg in Resources */,
 				2289BE5D2050C85600DF815E /* garfield00.jpg in Resources */,
 				2289BE5F2050C85600DF815E /* mall00.jpg in Resources */,
@@ -314,6 +334,7 @@
 				2289BE652050C85600DF815E /* bg01.jpg in Resources */,
 				2289BE662050C85600DF815E /* union.jpg in Resources */,
 				0477669C1CCD53A500F3F8FC /* Main.storyboard in Resources */,
+				22396E862092245400CC0CBC /* monu.png in Resources */,
 				2289BE612050C85600DF815E /* bible00.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +437,6 @@
 				043BB7881CCD4CA5000521FC /* AppDelegate.swift in Sources */,
 				22BC451B207BD2F500DB1867 /* MyConstants.swift in Sources */,
 				2279B31F207E606800D25E6A /* RubiconLocation.swift in Sources */,
-				22A01C792080DE9E00839214 /* gvrTableViewCell.swift in Sources */,
 				22BC451A207BD2F500DB1867 /* CardView.swift in Sources */,
 				22A01C7B2080E0FF00839214 /* VRTableViewController.swift in Sources */,
 				22CF14DD207D391700EE0035 /* SMBasicSegmentView.swift in Sources */,

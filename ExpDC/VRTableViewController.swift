@@ -7,6 +7,30 @@
 //
 import Foundation
 
+class gvrTableViewCell: UITableViewCell {
+    
+     @IBOutlet weak var primaryImageView: UIImageView!
+      @IBOutlet weak var secondaryImageView: UIImageView!
+    @IBOutlet weak var primaryTextLabel: UILabel!
+    @IBOutlet weak var secondaryTextLabel: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+      //  primaryTextLabel.text = "Selected"
+    }
+    
+}
+
+
+
 class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //MARK: GVR SDK
     var currentView: UIView?
@@ -17,7 +41,7 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     //MARK: Variables
     var lastCardClick: FloatingCard = FloatingCard.NA
     // cell reuse id (cells that scroll out of view can be reused)
-    let cellReuseIdentifier = "cell"
+    let cellReuseIdentifierX = "cell"
     var animals = [PlaceScene]()
     
     //MARK: Outlets
@@ -26,18 +50,17 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var daTableView: UITableView!
     
     //MARK: View DidLoad/etc
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Register the table view cell class and its reuse id
-        self.daTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-        
+        // This view controller itself will provide the delegate methods and row data for the table view.
+        self.daTableView.delegate = self
+        self.daTableView.dataSource = self
         // (optional) include this line if you want to remove the extra empty cell divider lines
         // self.tableView.tableFooterView = UIView()
         
-        // This view controller itself will provide the delegate methods and row data for the table view.
-        daTableView.delegate = self
-        daTableView.dataSource = self
+
 
         let x: CGFloat = 15
         let button = UIButton.init(type: .custom)
@@ -61,6 +84,8 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         mainPanoView.enableCardboardButton = true
         mainPanoView.enableInfoButton = false
         mainPanoView.hidesTransitionView = VR_hidesTransitionView
+        
+   
         switch lastCardClick{
         case FloatingCard.A:
             myNavBar.title = "Memorials/Monuments"
@@ -116,23 +141,21 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // create a cell for each table view row
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifierX, for: indexPath) as! gvrTableViewCell
+
+        cell.primaryTextLabel?.text = animals[indexPath.row].title
+        cell.secondaryTextLabel?.text = animals[indexPath.row].subtitle
         
-        // create a new cell if needed or reuse an old one
-        let cell: gvrTableViewCell = (self.daTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! gvrTableViewCell?)!
-        
-        // set the text from the data model
-        cell.primaryTextLabel?.text = self.animals[indexPath.row].title
-        cell.secondaryTextLabel?.text = self.animals[indexPath.row].subtitle
-        cell.primaryImageView?.image = UIImage(named: self.animals[indexPath.row].photo)
-        cell.secondaryImageView?.image = UIImage(named:self.animals[indexPath.row].photo2)
+        cell.primaryImageView?.image = UIImage(named: animals[indexPath.row].photo)
+          cell.secondaryImageView?.image = UIImage(named: animals[indexPath.row].photo2)
         
         return cell
     }
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
+        //print("You tapped cell number \(indexPath.row).")
         mainPanoView.load(UIImage(named: animals[indexPath.row].photoVR),
                           of: GVRPanoramaImageType.mono)
         
