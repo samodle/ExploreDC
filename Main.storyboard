@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tj8-Y7-zso">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="auR-1a-tiD">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -180,6 +180,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvs-S5-XR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="174"/>
+        </scene>
+        <!--Temp Launch View Controller-->
+        <scene sceneID="c0W-6q-x3P">
+            <objects>
+                <viewController id="auR-1a-tiD" customClass="TempLaunchViewController" customModule="ExploreDC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JoF-VY-US4"/>
+                        <viewControllerLayoutGuide type="bottom" id="qof-CZ-Ufo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KoI-LR-RE2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sroDCArtboard 11x2i" translatesAutoresizingMaskIntoConstraints="NO" id="OMb-7y-zna">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fzj-Hq-log" userLabel="height = 200"/>
+                                    <constraint firstAttribute="width" constant="100" id="nP5-Yx-pJf" userLabel="width = 200"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="MMW-Vx-00j">
+                                <rect key="frame" x="197" y="468" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OMb-7y-zna" firstAttribute="centerY" secondItem="KoI-LR-RE2" secondAttribute="centerY" id="1LX-Jg-17m"/>
+                            <constraint firstItem="OMb-7y-zna" firstAttribute="centerX" secondItem="KoI-LR-RE2" secondAttribute="centerX" id="63V-S9-62Y"/>
+                            <constraint firstItem="MMW-Vx-00j" firstAttribute="top" secondItem="OMb-7y-zna" secondAttribute="bottom" constant="50" id="gPf-Ch-PXx"/>
+                            <constraint firstItem="MMW-Vx-00j" firstAttribute="centerX" secondItem="KoI-LR-RE2" secondAttribute="centerX" id="kUj-4q-peZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndic" destination="MMW-Vx-00j" id="puk-uY-pRf"/>
+                        <segue destination="tj8-Y7-zso" kind="show" identifier="LesGetItStartedSegue" id="wvX-Or-xeq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJQ-gW-8Mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="929"/>
         </scene>
         <!--Slide Drawer View Controller-->
         <scene sceneID="MEP-Y5-dVk">
@@ -1024,11 +1064,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgw-d2-J78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2787" y="642"/>
+            <point key="canvasLocation" x="2786.9565217391305" y="641.57608695652175"/>
         </scene>
     </scenes>
     <resources>
         <image name="LeftArrow_Back" width="35" height="35"/>
+        <image name="sroDCArtboard 11x2i" width="553" height="544"/>
         <image name="sroEDCxAsset 1@4x" width="1506" height="1888"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wvX-Or-xeq"/>
+    </inferredMetricsTieBreakers>
 </document>
