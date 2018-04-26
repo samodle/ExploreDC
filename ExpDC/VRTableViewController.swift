@@ -7,7 +7,7 @@
 //
 import Foundation
 
-class VRTableViewController: UIViewController {
+class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //MARK: GVR SDK
     var currentView: UIView?
     var currentDisplayMode = GVRWidgetDisplayMode.embedded
@@ -16,12 +16,28 @@ class VRTableViewController: UIViewController {
     
     //MARK: Variables
     var lastCardClick: FloatingCard = FloatingCard.NA
+    // cell reuse id (cells that scroll out of view can be reused)
+    let cellReuseIdentifier = "cell"
+    var animals = [PlaceScene]()
+    
+    //MARK: Outlets
     @IBOutlet weak var myNavBar: UINavigationItem!
     @IBOutlet weak var actualNavBarRip: UINavigationBar!
+    @IBOutlet weak var daTableView: UITableView!
     
     //MARK: View DidLoad/etc
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Register the table view cell class and its reuse id
+        self.daTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        // (optional) include this line if you want to remove the extra empty cell divider lines
+        // self.tableView.tableFooterView = UIView()
+        
+        // This view controller itself will provide the delegate methods and row data for the table view.
+        daTableView.delegate = self
+        daTableView.dataSource = self
 /*
         let navBarbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.rewind, target: self, action: #selector(VRTableViewController.LesGoHomeDawg(_:)))
    */
@@ -104,6 +120,32 @@ class VRTableViewController: UIViewController {
     //    backButton.addTarget(self, action: #selector(self.backAction(_:)),A for: .touchUpInside)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+    }
+    
+    //MARK: TableView
+    // number of rows in table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.animals.count
+    }
+    
+    // create a cell for each table view row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell: gvrTableViewCell = (self.daTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! gvrTableViewCell?)!
+        
+        // set the text from the data model
+        cell.primaryTextLabel?.text = self.animals[indexPath.row].title
+        cell.secondaryTextLabel?.text = self.animals[indexPath.row].subtitle
+        cell.primaryImageView?.image = self.animals[indexPath.row].photo
+        cell.secondaryImageView?.image = self.animals[indexPath.row].photo2
+        
+        return cell
+    }
+    
+    // method to run when table view cell is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
     }
     
 }

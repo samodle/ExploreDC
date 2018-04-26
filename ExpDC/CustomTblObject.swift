@@ -13,7 +13,7 @@ class PlaceScene {
     //MARK: Properties
     
     var title: String
-     var subtitle: String
+    var subtitle: String
     var photo: UIImage?
     var photo2: UIImage?
     

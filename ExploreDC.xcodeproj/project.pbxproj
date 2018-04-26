@@ -126,6 +126,7 @@
 				043BB7871CCD4CA5000521FC /* AppDelegate.swift */,
 				22BC4518207BD2F500DB1867 /* MyConstants.swift */,
 				22A01C782080DE9E00839214 /* gvrTableViewCell.swift */,
+				224A911D2090D66600859A0A /* CustomTblObject.swift */,
 				22F77F3C207D082800317850 /* VCs */,
 				0473CA6B1CF13E2300926B6C /* 360 Images */,
 				224A911C2090D18700859A0A /* TableImages */,
@@ -135,7 +136,6 @@
 				22AFB4C52077A27200AA845A /* awsconfiguration.json */,
 				043BB7901CCD4CA5000521FC /* LaunchScreen.storyboard */,
 				043BB7931CCD4CA5000521FC /* Info.plist */,
-				224A911D2090D66600859A0A /* CustomTblObject.swift */,
 			);
 			path = ExpDC;
 			sourceTree = "<group>";
