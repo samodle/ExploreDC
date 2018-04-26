@@ -1011,8 +1011,8 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwx-Xx-cUI">
                                                     <rect key="frame" x="308" y="0.0" width="66" height="44"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="Ulp-Sc-WMU"/>
-                                                        <constraint firstAttribute="width" constant="66" id="dtW-eD-9sN"/>
+                                                        <constraint firstAttribute="height" constant="44" id="Ulp-Sc-WMU" userLabel="height = 34"/>
+                                                        <constraint firstAttribute="width" constant="66" id="dtW-eD-9sN" userLabel="width = 46"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N1Z-WB-Ujm">
@@ -1037,14 +1037,14 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="N1Z-WB-Ujm" secondAttribute="bottom" id="679-0W-Cun"/>
-                                                <constraint firstAttribute="trailing" secondItem="fwx-Xx-cUI" secondAttribute="trailing" id="EJh-FW-ooj"/>
-                                                <constraint firstItem="0Gp-d9-shD" firstAttribute="leading" secondItem="N1Z-WB-Ujm" secondAttribute="trailing" constant="17" id="HEh-SJ-ttd"/>
+                                                <constraint firstAttribute="trailing" secondItem="fwx-Xx-cUI" secondAttribute="trailing" id="EJh-FW-ooj" userLabel="trailing = Secondary Image View.trailing + 5"/>
+                                                <constraint firstItem="0Gp-d9-shD" firstAttribute="leading" secondItem="N1Z-WB-Ujm" secondAttribute="trailing" constant="17" id="HEh-SJ-ttd" userLabel="Primary Text Label.leading = Primary Image View.trailing + 10"/>
                                                 <constraint firstItem="0Gp-d9-shD" firstAttribute="leading" secondItem="v64-t5-c9P" secondAttribute="leading" id="KBO-8d-geK"/>
                                                 <constraint firstItem="N1Z-WB-Ujm" firstAttribute="top" secondItem="J6H-uZ-ZSV" secondAttribute="top" id="PbZ-lt-47K"/>
                                                 <constraint firstItem="N1Z-WB-Ujm" firstAttribute="leading" secondItem="J6H-uZ-ZSV" secondAttribute="leading" id="Sfe-gl-I0Q"/>
                                                 <constraint firstItem="v64-t5-c9P" firstAttribute="top" secondItem="0Gp-d9-shD" secondAttribute="bottom" constant="-4" id="hVn-XZ-DzV"/>
-                                                <constraint firstItem="fwx-Xx-cUI" firstAttribute="top" secondItem="J6H-uZ-ZSV" secondAttribute="top" id="nHL-cI-BDw"/>
-                                                <constraint firstAttribute="bottom" secondItem="fwx-Xx-cUI" secondAttribute="bottom" id="qC3-KN-hAL"/>
+                                                <constraint firstItem="fwx-Xx-cUI" firstAttribute="top" secondItem="J6H-uZ-ZSV" secondAttribute="top" id="nHL-cI-BDw" userLabel="Secondary Image View.top = top + 5"/>
+                                                <constraint firstAttribute="bottom" secondItem="fwx-Xx-cUI" secondAttribute="bottom" id="qC3-KN-hAL" userLabel="bottom = Secondary Image View.bottom + 5"/>
                                                 <constraint firstItem="0Gp-d9-shD" firstAttribute="top" secondItem="J6H-uZ-ZSV" secondAttribute="top" constant="5" id="s8V-NP-IF8"/>
                                             </constraints>
                                         </tableViewCellContentView>
