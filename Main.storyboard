@@ -805,8 +805,23 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <view alpha="0.94999998807907104" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lcX-FU-Kek" userLabel="MainMenuView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2U-4f-VzK" userLabel="MainMapView">
+                                <rect key="frame" x="0.0" y="120" width="414" height="616"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2ns-dq-TUz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="616"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2ns-dq-TUz" firstAttribute="leading" secondItem="i2U-4f-VzK" secondAttribute="leading" id="3ig-vl-4Hw"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ns-dq-TUz" secondAttribute="trailing" id="Zhf-DX-gKw"/>
+                                    <constraint firstAttribute="bottom" secondItem="2ns-dq-TUz" secondAttribute="bottom" id="rNx-EQ-xT1"/>
+                                    <constraint firstItem="2ns-dq-TUz" firstAttribute="top" secondItem="i2U-4f-VzK" secondAttribute="top" id="um7-RB-PiY"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.94999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcX-FU-Kek" userLabel="MainMenuView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="100"/>
                                 <subviews>
                                     <view alpha="0.94999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBI-Kn-p6f" userLabel="MainMenuSegmentView" customClass="SMSegmentView" customModule="ExploreDC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="414" height="30"/>
@@ -866,9 +881,13 @@
                         <color key="backgroundColor" red="0.90018485159999995" green="0.90280649589999995" blue="0.90222973419999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lcX-FU-Kek" firstAttribute="top" secondItem="R4D-On-odw" secondAttribute="topMargin" id="4cE-zz-aZW"/>
+                            <constraint firstItem="i2U-4f-VzK" firstAttribute="leading" secondItem="R4D-On-odw" secondAttribute="leading" id="5lv-12-yhQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lcX-FU-Kek" secondAttribute="trailing" constant="-20" id="9JN-Kp-HcX"/>
                             <constraint firstItem="ULx-PZ-Y4V" firstAttribute="top" secondItem="lcX-FU-Kek" secondAttribute="bottom" id="E1e-UN-rlM" userLabel="Scroll View.top = MainMenuView.bottom"/>
+                            <constraint firstAttribute="trailing" secondItem="i2U-4f-VzK" secondAttribute="trailing" id="FVs-vD-ZfM"/>
                             <constraint firstItem="uiB-d3-QO3" firstAttribute="width" secondItem="R4D-On-odw" secondAttribute="width" id="OSJ-PO-RYb"/>
+                            <constraint firstItem="i2U-4f-VzK" firstAttribute="top" secondItem="lcX-FU-Kek" secondAttribute="bottom" id="aT5-Rw-kOc"/>
+                            <constraint firstItem="71N-GD-1oZ" firstAttribute="top" secondItem="i2U-4f-VzK" secondAttribute="bottom" id="dkR-b0-i9I"/>
                             <constraint firstItem="71N-GD-1oZ" firstAttribute="top" secondItem="ULx-PZ-Y4V" secondAttribute="bottom" id="eAC-sJ-E2q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ULx-PZ-Y4V" secondAttribute="trailing" constant="-20" id="p0b-bv-HvM"/>
                             <constraint firstItem="lcX-FU-Kek" firstAttribute="leading" secondItem="R4D-On-odw" secondAttribute="leadingMargin" constant="-20" id="whf-50-Khp"/>
@@ -899,6 +918,8 @@
                         <outlet property="MapViewD" destination="qvI-Sn-vzh" id="srQ-s3-11C"/>
                         <outlet property="MapViewF" destination="yo7-ye-LX1" id="iHl-Um-2a5"/>
                         <outlet property="ScrollView" destination="ULx-PZ-Y4V" id="ref-0J-e6g"/>
+                        <outlet property="bigMapView" destination="i2U-4f-VzK" id="eeq-ws-NQH"/>
+                        <outlet property="mapDaddy" destination="2ns-dq-TUz" id="Wjx-Bi-1TR"/>
                         <outlet property="mapViewA" destination="SWW-jE-rhH" id="E8q-D8-RNZ"/>
                         <outlet property="mapViewB" destination="wrL-si-kca" id="sNY-fm-TYN"/>
                         <outlet property="mapViewC" destination="oPz-Kw-e5D" id="yPw-Hq-JTK"/>

@@ -36,16 +36,22 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             isDaySelected = true
             isWeekSelected = false
             
+            ScrollView.isHidden = false
+            bigMapView.isHidden = true
+            
             ContainerViewNew.isHidden = false
             ContainerViewNew2.isHidden = true
 
         case 1:
-            print("Area Selected")
+            print("Map Selected")
             isDaySelected = false
             isWeekSelected = true
             
-            ContainerViewNew.isHidden = true
-            ContainerViewNew2.isHidden = false
+            ScrollView.isHidden = true
+            bigMapView.isHidden = false
+            
+         //   ContainerViewNew.isHidden = true
+          //  ContainerViewNew2.isHidden = false
      
     /*    case 2:
             print("month selected")
@@ -92,6 +98,10 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     @IBOutlet weak var mapViewD: MKMapView!
     @IBOutlet weak var mapViewE: MKMapView!
     @IBOutlet weak var mapViewF: MKMapView!
+    
+    @IBOutlet weak var mapDaddy: MKMapView!
+    
+    @IBOutlet weak var bigMapView: UIView!
     
     //MARK: Initialization
     
@@ -197,6 +207,10 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         let initialLocationF = CLLocation(latitude: 38.9072, longitude: -77.0369)
         centerMapOnLocation(location: initialLocationF,mKmV: mapViewF, regionRadius: regionRadiusF)
         
+        let regionRadiusX: CLLocationDistance = 7000
+        let initialLocationx = CLLocation(latitude: 38.9072, longitude: -77.0369)
+        centerMapOnLocation(location: initialLocationx,mKmV: mapDaddy, regionRadius: regionRadiusX)
+        
         //Programatically adding touch event handler to Cards (CardViewCOntrollers)
         
         //Card - gesture recognizers. https://developer.apple.com/documentation/uikit/uitapgesturerecognizer?preferredLanguage=occ
@@ -225,12 +239,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         self.CardView2E.addGestureRecognizer(gesture25)
         let gesture26 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2F(_:)))
         self.CardView2F.addGestureRecognizer(gesture26)
-        
-        //Card - old stuff
-        //  let gesture2 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenLossCompass(_:)))
-      //  self.LossCompassCard.addGestureRecognizer(gesture2)
-      //  self.LossCompassGraphView.addGestureRecogni/zer(gesture2)
-       // self.LossCompassLabel.addGestureRecognizer(gesture2)
+ 
     }
 
     //MARK: Map Kit
