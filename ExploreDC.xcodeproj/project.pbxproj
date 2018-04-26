@@ -30,6 +30,12 @@
 		22396E94209263C100CC0CBC /* daCapitol.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E8E209263C000CC0CBC /* daCapitol.png */; };
 		22396E9620927D5400CC0CBC /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22396E9520927D5400CC0CBC /* Artwork.swift */; };
 		22396E9820927D6200CC0CBC /* ArtworkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22396E9720927D6200CC0CBC /* ArtworkViews.swift */; };
+		22396EAB209291EB00CC0CBC /* protSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396EA5209291EA00CC0CBC /* protSmall.png */; };
+		22396EAC209291EB00CC0CBC /* monuSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396EA6209291EB00CC0CBC /* monuSmall.png */; };
+		22396EAD209291EB00CC0CBC /* capiSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396EA7209291EB00CC0CBC /* capiSmall.png */; };
+		22396EAE209291EB00CC0CBC /* treeSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396EA8209291EB00CC0CBC /* treeSmall.png */; };
+		22396EAF209291EB00CC0CBC /* tombSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396EA9209291EB00CC0CBC /* tombSmall.png */; };
+		22396EB0209291EB00CC0CBC /* museSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396EAA209291EB00CC0CBC /* museSmall.png */; };
 		224A911E2090D66600859A0A /* CustomTblObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A911D2090D66600859A0A /* CustomTblObject.swift */; };
 		22663D8B207D7073004D0D38 /* SlideDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */; };
 		2279B31F207E606800D25E6A /* RubiconLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279B31E207E606800D25E6A /* RubiconLocation.swift */; };
@@ -88,6 +94,12 @@
 		22396E8E209263C000CC0CBC /* daCapitol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daCapitol.png; sourceTree = "<group>"; };
 		22396E9520927D5400CC0CBC /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		22396E9720927D6200CC0CBC /* ArtworkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViews.swift; sourceTree = "<group>"; };
+		22396EA5209291EA00CC0CBC /* protSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = protSmall.png; sourceTree = "<group>"; };
+		22396EA6209291EB00CC0CBC /* monuSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monuSmall.png; sourceTree = "<group>"; };
+		22396EA7209291EB00CC0CBC /* capiSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = capiSmall.png; sourceTree = "<group>"; };
+		22396EA8209291EB00CC0CBC /* treeSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treeSmall.png; sourceTree = "<group>"; };
+		22396EA9209291EB00CC0CBC /* tombSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tombSmall.png; sourceTree = "<group>"; };
+		22396EAA209291EB00CC0CBC /* museSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museSmall.png; sourceTree = "<group>"; };
 		224A911D2090D66600859A0A /* CustomTblObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTblObject.swift; sourceTree = "<group>"; };
 		22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideDrawerViewController.swift; sourceTree = "<group>"; };
 		2279B31E207E606800D25E6A /* RubiconLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubiconLocation.swift; sourceTree = "<group>"; };
@@ -212,6 +224,12 @@
 		224A911C2090D18700859A0A /* TableImages */ = {
 			isa = PBXGroup;
 			children = (
+				22396EA7209291EB00CC0CBC /* capiSmall.png */,
+				22396EA6209291EB00CC0CBC /* monuSmall.png */,
+				22396EAA209291EB00CC0CBC /* museSmall.png */,
+				22396EA5209291EA00CC0CBC /* protSmall.png */,
+				22396EA9209291EB00CC0CBC /* tombSmall.png */,
+				22396EA8209291EB00CC0CBC /* treeSmall.png */,
 				22396E7D2092245300CC0CBC /* capi.png */,
 				22396E802092245400CC0CBC /* monu.png */,
 				22396E7E2092245400CC0CBC /* muse.png */,
@@ -341,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22396EAE209291EB00CC0CBC /* treeSmall.png in Resources */,
 				22A01C7D2080EA3A00839214 /* pano_scusD01.png in Resources */,
 				043BB7921CCD4CA5000521FC /* LaunchScreen.storyboard in Resources */,
 				22396E872092245400CC0CBC /* tree.png in Resources */,
@@ -355,17 +374,21 @@
 				2289BE5B2050C85600DF815E /* mall01.jpg in Resources */,
 				22AFB4C62077A27200AA845A /* awsconfiguration.json in Resources */,
 				22396E94209263C100CC0CBC /* daCapitol.png in Resources */,
+				22396EB0209291EB00CC0CBC /* museSmall.png in Resources */,
 				2289BE602050C85600DF815E /* bible02.jpg in Resources */,
 				2289BE692050C85600DF815E /* mall02.jpg in Resources */,
 				22396E90209263C100CC0CBC /* daWwii.png in Resources */,
 				22396E822092245400CC0CBC /* tomb.png in Resources */,
 				2289BE5E2050C85600DF815E /* bg02.jpg in Resources */,
 				2289BE642050C85600DF815E /* verizon01.jpg in Resources */,
+				22396EAF209291EB00CC0CBC /* tombSmall.png in Resources */,
 				22396E852092245400CC0CBC /* prot.png in Resources */,
 				2289BE682050C85600DF815E /* bg03.jpg in Resources */,
+				22396EAB209291EB00CC0CBC /* protSmall.png in Resources */,
 				2289BE5D2050C85600DF815E /* garfield00.jpg in Resources */,
 				22396E92209263C100CC0CBC /* daIndians.png in Resources */,
 				2289BE5F2050C85600DF815E /* mall00.jpg in Resources */,
+				22396EAD209291EB00CC0CBC /* capiSmall.png in Resources */,
 				2289BE672050C85600DF815E /* wharf.jpg in Resources */,
 				22396E91209263C100CC0CBC /* daArlington.png in Resources */,
 				2289BE652050C85600DF815E /* bg01.jpg in Resources */,
@@ -374,6 +397,7 @@
 				0477669C1CCD53A500F3F8FC /* Main.storyboard in Resources */,
 				22396E862092245400CC0CBC /* monu.png in Resources */,
 				2289BE612050C85600DF815E /* bible00.jpg in Resources */,
+				22396EAC209291EB00CC0CBC /* monuSmall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

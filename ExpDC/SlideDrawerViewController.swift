@@ -158,7 +158,16 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         segmentView?.selectSegmentAtIndex(0)
 
         // set initial location in DC
-
+        mapDaddy.delegate = self
+        //    mapView.register(ArtworkMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        if #available(iOS 11.0, *) {
+            mapDaddy.register(ArtworkView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        } else {
+            // Fallback on earlier versions
+            let xyz3 = "moose"
+        }
+        
+        
         let regionRadiusX: CLLocationDistance = 7000
         let initialLocationx = CLLocation(latitude: 38.9072, longitude: -77.0369)
         centerMapOnLocation(location: initialLocationx,mKmV: mapDaddy, regionRadius: regionRadiusX)

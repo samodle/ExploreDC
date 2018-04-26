@@ -50,17 +50,17 @@ class Artwork: NSObject, MKAnnotation {
     var imageName: String? {
         switch discipline {
         case Discipline.cemetery:
-            return "tomb.png"
+            return "tombSmall.png"
         case Discipline.etc:
-            return "tree.png"
+            return "treeSmall.png"
         case Discipline.government:
-            return "capi.png"
+            return "capiSmall.png"
         case Discipline.memorial:
-            return "monu.png"
+            return "monuSmall.png"
         case Discipline.museum:
-            return "muse.png"
+            return "museSmall.png"
         case Discipline.event:
-            return "prot.png"
+            return "protSmall.png"
         }
     }
     
