@@ -19,6 +19,10 @@ public enum FloatingCard{
     case A, B, C, D, E, F, NA
 }
 
+public enum Discipline{
+    case memorial, cemetery, government, museum, event, etc
+}
+
 //MARK: Settings
 let VR_hidesTransitionView: Bool = true
 

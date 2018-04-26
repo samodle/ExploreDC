@@ -28,6 +28,8 @@
 		22396E92209263C100CC0CBC /* daIndians.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E8C209263BF00CC0CBC /* daIndians.png */; };
 		22396E93209263C100CC0CBC /* daLinc.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E8D209263C000CC0CBC /* daLinc.png */; };
 		22396E94209263C100CC0CBC /* daCapitol.png in Resources */ = {isa = PBXBuildFile; fileRef = 22396E8E209263C000CC0CBC /* daCapitol.png */; };
+		22396E9620927D5400CC0CBC /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22396E9520927D5400CC0CBC /* Artwork.swift */; };
+		22396E9820927D6200CC0CBC /* ArtworkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22396E9720927D6200CC0CBC /* ArtworkViews.swift */; };
 		224A911E2090D66600859A0A /* CustomTblObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A911D2090D66600859A0A /* CustomTblObject.swift */; };
 		22663D8B207D7073004D0D38 /* SlideDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */; };
 		2279B31F207E606800D25E6A /* RubiconLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279B31E207E606800D25E6A /* RubiconLocation.swift */; };
@@ -84,6 +86,8 @@
 		22396E8C209263BF00CC0CBC /* daIndians.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daIndians.png; sourceTree = "<group>"; };
 		22396E8D209263C000CC0CBC /* daLinc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daLinc.png; sourceTree = "<group>"; };
 		22396E8E209263C000CC0CBC /* daCapitol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daCapitol.png; sourceTree = "<group>"; };
+		22396E9520927D5400CC0CBC /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		22396E9720927D6200CC0CBC /* ArtworkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViews.swift; sourceTree = "<group>"; };
 		224A911D2090D66600859A0A /* CustomTblObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTblObject.swift; sourceTree = "<group>"; };
 		22663D8A207D7073004D0D38 /* SlideDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideDrawerViewController.swift; sourceTree = "<group>"; };
 		2279B31E207E606800D25E6A /* RubiconLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubiconLocation.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				22AFB4C52077A27200AA845A /* awsconfiguration.json */,
 				043BB7901CCD4CA5000521FC /* LaunchScreen.storyboard */,
 				043BB7931CCD4CA5000521FC /* Info.plist */,
+				22396E9520927D5400CC0CBC /* Artwork.swift */,
+				22396E9720927D6200CC0CBC /* ArtworkViews.swift */,
 			);
 			path = ExpDC;
 			sourceTree = "<group>";
@@ -471,8 +477,10 @@
 				2279B31F207E606800D25E6A /* RubiconLocation.swift in Sources */,
 				22BC451A207BD2F500DB1867 /* CardView.swift in Sources */,
 				22A01C7B2080E0FF00839214 /* VRTableViewController.swift in Sources */,
+				22396E9820927D6200CC0CBC /* ArtworkViews.swift in Sources */,
 				22CF14DD207D391700EE0035 /* SMBasicSegmentView.swift in Sources */,
 				22A01C7F2080EDEB00839214 /* VRMapViewController.swift in Sources */,
+				22396E9620927D5400CC0CBC /* Artwork.swift in Sources */,
 				22663D8B207D7073004D0D38 /* SlideDrawerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -40,8 +40,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             bigMapView.isHidden = true
             
             ContainerViewNew.isHidden = false
-            ContainerViewNew2.isHidden = true
-
         case 1:
             print("Map Selected")
             isDaySelected = false
@@ -49,16 +47,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             
             ScrollView.isHidden = true
             bigMapView.isHidden = false
-            
-         //   ContainerViewNew.isHidden = true
-          //  ContainerViewNew2.isHidden = false
-     
-    /*    case 2:
-            print("month selected")
-            isDaySelected = false
-            isWeekSelected = false
-            isMonthSelected = true
-      */
+
         default:
             break
         }
@@ -67,8 +56,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     //MARK: Variables
   //  let assetfuelBlue = UIColor(red: 50/255, green: 205/255, blue: 240/255, alpha: 1)
     @IBOutlet var ContainerViewNew: UIView!
-    @IBOutlet weak var ContainerViewNew2: UIView!
-    @IBOutlet var ScrollView: UIScrollView!
+  @IBOutlet var ScrollView: UIScrollView!
 
     @IBOutlet weak var CardViewA: CardView!
     @IBOutlet weak var CardViewB: CardView!
@@ -76,12 +64,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     @IBOutlet weak var CardViewD: CardView!
     @IBOutlet weak var CardViewE: CardView!
     @IBOutlet weak var CardViewF: CardView!
-    @IBOutlet weak var CardView2A: CardView!
-    @IBOutlet weak var CardView2B: CardView!
-    @IBOutlet weak var CardView2C: CardView!
-    @IBOutlet weak var CardView2D: CardView!
-    @IBOutlet weak var CardView2E: CardView!
-    @IBOutlet weak var CardView2F: CardView!
     
     @IBOutlet var MainMenuSegmentView: SMSegmentView!
     
@@ -91,13 +73,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     @IBOutlet weak var panoCardD: GVRPanoramaView!
     @IBOutlet weak var panoCardE: GVRPanoramaView!
     @IBOutlet weak var panoCardF: GVRPanoramaView!
-    
-    @IBOutlet weak var mapViewA: MKMapView!
-    @IBOutlet weak var mapViewB: MKMapView!
-    @IBOutlet weak var mapViewC: MKMapView!
-    @IBOutlet weak var mapViewD: MKMapView!
-    @IBOutlet weak var mapViewE: MKMapView!
-    @IBOutlet weak var mapViewF: MKMapView!
     
     @IBOutlet weak var mapDaddy: MKMapView!
     
@@ -183,33 +158,72 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         segmentView?.selectSegmentAtIndex(0)
 
         // set initial location in DC
-        let regionRadius: CLLocationDistance = 10000
-        let initialLocation = CLLocation(latitude: 38.9072, longitude: -77.1369)
-        centerMapOnLocation(location: initialLocation,mKmV: mapViewA,regionRadius: regionRadius)
-        
-        let regionRadiusB: CLLocationDistance = 8000
-        let initialLocationB = CLLocation(latitude: 38.9072, longitude: -77.0369)
-        centerMapOnLocation(location: initialLocationB,mKmV: mapViewB, regionRadius: regionRadiusB)
-        
-        let regionRadiusC: CLLocationDistance = 6000
-        let initialLocationC = CLLocation(latitude: 38.8072, longitude: -77.0369)
-        centerMapOnLocation(location: initialLocationC,mKmV: mapViewC, regionRadius: regionRadiusC)
-        
-        let regionRadiusD: CLLocationDistance = 9000
-        let initialLocationD = CLLocation(latitude: 38.9072, longitude: -77.0369)
-        centerMapOnLocation(location: initialLocationD,mKmV: mapViewD, regionRadius: regionRadiusD)
-        
-        let regionRadiusE: CLLocationDistance = 8000
-        let initialLocationE = CLLocation(latitude: 38.9072, longitude: -77.0369)
-        centerMapOnLocation(location: initialLocationE,mKmV: mapViewE, regionRadius: regionRadiusE)
-        
-        let regionRadiusF: CLLocationDistance = 7000
-        let initialLocationF = CLLocation(latitude: 38.9072, longitude: -77.0369)
-        centerMapOnLocation(location: initialLocationF,mKmV: mapViewF, regionRadius: regionRadiusF)
-        
+
         let regionRadiusX: CLLocationDistance = 7000
         let initialLocationx = CLLocation(latitude: 38.9072, longitude: -77.0369)
         centerMapOnLocation(location: initialLocationx,mKmV: mapDaddy, regionRadius: regionRadiusX)
+        
+        
+        // show artwork on map
+            let dmx = Artwork(title: "Lincoln Memorial",
+              locationName: "Abe chills hard in here",
+              discipline: Discipline.memorial,
+              coordinate: CLLocationCoordinate2D(latitude: 38.889305, longitude: -77.050092))
+            mapDaddy.addAnnotation(dmx)
+        
+        let dmx2 = Artwork(title: "Arlington National Cemetery",
+                          locationName: "ery or ary?",
+                          discipline: Discipline.cemetery,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.87651, longitude: -77.06979))
+        mapDaddy.addAnnotation(dmx2)
+        
+        let dmx3 = Artwork(title: "Jefferson Memorial",
+                          locationName: "TJ chills hard here",
+                          discipline: Discipline.memorial,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.880553, longitude: -77.036273))
+        mapDaddy.addAnnotation(dmx3)
+        
+        let dmx4 = Artwork(title: "National Arboreum",
+                          locationName: "lots of trees dawg",
+                          discipline: Discipline.etc,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.910647, longitude: -77.966021))
+        mapDaddy.addAnnotation(dmx4)
+        
+        let dmx5 = Artwork(title: "Marine Corps Memorial",
+                           locationName: "Iwo Jima",
+                          discipline: Discipline.memorial,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.890366, longitude: -77.070123))
+        mapDaddy.addAnnotation(dmx5)
+        
+        let dmx6 = Artwork(title: "March For Our Lives",
+                          locationName: "March 2018",
+                          discipline: Discipline.event,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.892115, longitude: -77.021242))
+        mapDaddy.addAnnotation(dmx6)
+        
+        let dmx7 = Artwork(title: "Women's March",
+                          locationName: "April 18",
+                          discipline: Discipline.event,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.897052, longitude: -77.039567))
+        mapDaddy.addAnnotation(dmx7)
+        
+        let dmx8 = Artwork(title: "White House",
+                          locationName: "realDonaldTrump tweets here",
+                          discipline: Discipline.government,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.89762, longitude: -77.036070))
+        mapDaddy.addAnnotation(dmx8)
+        
+        let dmx9 = Artwork(title: "Botanical Garden",
+                          locationName: "plants on plants on plants",
+                          discipline: Discipline.museum,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.887817, longitude: -77.012295))
+        mapDaddy.addAnnotation(dmx9)
+        
+        let dmx0 = Artwork(title: "Capitol Building",
+                          locationName: "nothing happens here",
+                          discipline: Discipline.government,
+                          coordinate: CLLocationCoordinate2D(latitude: 38.889888, longitude: -77.008432))
+        mapDaddy.addAnnotation(dmx0)
         
         //Programatically adding touch event handler to Cards (CardViewCOntrollers)
         
@@ -227,19 +241,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         let gesture6 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIsF(_:)))
         self.CardViewF.addGestureRecognizer(gesture6)
         
-        let gesture21 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2A(_:)))
-        self.CardView2A.addGestureRecognizer(gesture21)
-        let gesture22 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2B(_:)))
-        self.CardView2B.addGestureRecognizer(gesture22)
-        let gesture23 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2C(_:)))
-        self.CardView2C.addGestureRecognizer(gesture23)
-        let gesture24 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2D(_:)))
-        self.CardView2D.addGestureRecognizer(gesture24)
-        let gesture25 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2E(_:)))
-        self.CardView2E.addGestureRecognizer(gesture25)
-        let gesture26 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIs2F(_:)))
-        self.CardView2F.addGestureRecognizer(gesture26)
- 
     }
 
     //MARK: Map Kit
@@ -257,10 +258,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             let toolPageViewController = segue.destination as! VRTableViewController
             toolPageViewController.lastCardClick = LastCardTapped
             toolPageViewController.animals = getVRTableData(thingy: LastCardTapped)
-        }
-        else if segue.identifier == "ShowMapSegue"{
-            let toolPageViewController = segue.destination as! VRMapViewController
-            toolPageViewController.lastCardClick = LastCardTapped
         }
     }
     
@@ -288,46 +285,11 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         LastCardTapped = FloatingCard.F
         performSegue(withIdentifier: "ShowCategorySegue", sender: self)
     }
-    
-    
-    
-    @objc func OpenAllKPIs2A(_ sender:UITapGestureRecognizer){
-        LastCardTapped = FloatingCard.A
-        performSegue(withIdentifier: "ShowMapSegue", sender: self)
-    }
-    
-    @objc func OpenAllKPIs2B(_ sender:UITapGestureRecognizer){
-        LastCardTapped = FloatingCard.B
-        performSegue(withIdentifier: "ShowMapSegue", sender: self)
-    }
-    
-    @objc func OpenAllKPIs2C(_ sender:UITapGestureRecognizer){
-        LastCardTapped = FloatingCard.C
-        performSegue(withIdentifier: "ShowMapSegue", sender: self)
-    }
-    
-    @objc func OpenAllKPIs2D(_ sender:UITapGestureRecognizer){
-        LastCardTapped = FloatingCard.D
-        performSegue(withIdentifier: "ShowMapSegue", sender: self)
-    }
-    
-    @objc func OpenAllKPIs2E(_ sender:UITapGestureRecognizer){
-        LastCardTapped = FloatingCard.E
-        performSegue(withIdentifier: "ShowMapSegue", sender: self)
-    }
-    
-    @objc func OpenAllKPIs2F(_ sender:UITapGestureRecognizer){
-        LastCardTapped = FloatingCard.F
-        performSegue(withIdentifier: "ShowMapSegue", sender: self)
-    }
-    
-  
 
    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
         print("Cell \(indexPath.row) selected")
     }
-    
     
     func goHome() {
         dismiss(animated: true, completion: nil)
@@ -335,18 +297,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
    
     
     //MARK: Other
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
-    {
-        DispatchQueue.main.async {
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-   
     func ManageCardHeights() {
         
         
@@ -371,22 +321,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             CardViewFHeight.isActive = true
             ContainerViewHeight.isActive = true
             
-            let CardView2AHeight = CardView2A.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2BHeight = CardView2B.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2CHeight = CardView2C.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2DHeight = CardView2D.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2EHeight = CardView2E.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2FHeight = CardView2F.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let Container2ViewHeight = ContainerViewNew2.heightAnchor.constraint(equalToConstant: 1600)
-            
-            CardView2AHeight.isActive = true
-            CardView2BHeight.isActive = true
-            CardView2CHeight.isActive = true
-            CardView2DHeight.isActive = true
-            CardView2EHeight.isActive = true
-            CardView2FHeight.isActive = true
-            Container2ViewHeight.isActive = true
-            
         } else
         {
             let CardViewAHeight = CardViewA.heightAnchor.constraint(equalToConstant: PublicConstants.SmallHeightAnchor)
@@ -404,30 +338,9 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             CardViewEHeight.isActive = true
             CardViewFHeight.isActive = true
             ContainerViewHeight.isActive = true
-            
-            let CardView2AHeight = CardView2A.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2BHeight = CardView2B.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2CHeight = CardView2C.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2DHeight = CardView2D.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2EHeight = CardView2E.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let CardView2FHeight = CardView2F.heightAnchor.constraint(equalToConstant: PublicConstants.BigHeightAnchor)
-            let Container2ViewHeight = ContainerViewNew2.heightAnchor.constraint(equalToConstant: 3000)
-            
-            CardView2AHeight.isActive = true
-            CardView2BHeight.isActive = true
-            CardView2CHeight.isActive = true
-            CardView2DHeight.isActive = true
-            CardView2EHeight.isActive = true
-            CardView2FHeight.isActive = true
-            Container2ViewHeight.isActive = true
         }
         
     }
-  
-    func showAlert(_ sender: AnyObject) {
-    }
-    
-    
 }
 
 //MARK: VR Extension
@@ -464,6 +377,40 @@ extension SlideDrawerViewController: GVRWidgetViewDelegate {
         // 2
         
     }
+}
+
+
+// MARK: - MKMapViewDelegate
+
+extension SlideDrawerViewController: MKMapViewDelegate {
+    
+    //   1
+    //  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    //    guard let annotation = annotation as? Artwork else { return nil }
+    //    // 2
+    //    let identifier = "marker"
+    //    var view: MKMarkerAnnotationView
+    //    if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+    //      as? MKMarkerAnnotationView { // 3
+    //      dequeuedView.annotation = annotation
+    //      view = dequeuedView
+    //    } else {
+    //      // 4
+    //      view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+    //      view.canShowCallout = true
+    //      view.calloutOffset = CGPoint(x: -5, y: 5)
+    //      view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+    //    }
+    //    return view
+    //  }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! Artwork
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey:
+            MKLaunchOptionsDirectionsModeDriving]
+        location.mapItem().openInMaps(launchOptions: launchOptions)
+}
 }
 
 
