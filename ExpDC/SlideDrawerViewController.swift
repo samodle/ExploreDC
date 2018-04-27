@@ -54,6 +54,8 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     }
        
     //MARK: Variables
+        let locationManager = CLLocationManager()
+    
   //  let assetfuelBlue = UIColor(red: 50/255, green: 205/255, blue: 240/255, alpha: 1)
     @IBOutlet var ContainerViewNew: UIView!
   @IBOutlet var ScrollView: UIScrollView!
@@ -97,10 +99,13 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if(DidWeJustUnwind){
-            DidWeJustUnwind = false
-            performSegue(withIdentifier: SegueToExecute, sender: self)
-        }
+        
+         checkLocationAuthorizationStatus()
+        
+     //   if(DidWeJustUnwind){
+      //      DidWeJustUnwind = false
+      //      performSegue(withIdentifier: SegueToExecute, sender: self)
+      //  }
     }
 
     override func viewDidLoad() {
@@ -269,9 +274,16 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     func centerMapOnLocation(location: CLLocation, mKmV: MKMapView, regionRadius: CLLocationDistance) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius, regionRadius)
-        mKmV.setRegion(coordinateRegion, animated: true)
+        mKmV.setRegion(coordinateRegion, animated: false)
     }
     
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            mapDaddy.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
     //MARK: Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

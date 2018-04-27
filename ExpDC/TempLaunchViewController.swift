@@ -13,6 +13,8 @@ class TempLaunchViewController: UIViewController {
     
     @IBOutlet weak var activityIndic: UIActivityIndicatorView!
     
+    var isFirstTimeDawg: Bool = true
+    
     //MARK: INIT
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,19 @@ class TempLaunchViewController: UIViewController {
                  }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !isFirstTimeDawg {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(150)) {
+                self.WoopWoop()
+            }
+        }
+    }
+    
+    
     @objc func WoopWoop(){
+        isFirstTimeDawg = false
         performSegue(withIdentifier: "LesGetItStartedSegue", sender: self)
     }
     

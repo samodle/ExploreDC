@@ -5,7 +5,6 @@
 //  Created by sam on 4/26/18.
 //  Copyright © 2018 Rubicon. All rights reserved.
 //
-
 import Foundation
 import MapKit
 import Contacts
@@ -29,7 +28,6 @@ class Artwork: NSObject, MKAnnotation {
         return locationName
     }
     
-    // pinTintColor for disciplines: Sculpture, Plaque, Mural, Monument, other
     var markerTintColor: UIColor  {
         switch discipline {
         case Discipline.cemetery:
@@ -72,5 +70,4 @@ class Artwork: NSObject, MKAnnotation {
         mapItem.name = title
         return mapItem
     }
-    
 }
