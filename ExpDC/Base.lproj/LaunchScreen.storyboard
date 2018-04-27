@@ -21,11 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sroDCArtboard 11x2i" translatesAutoresizingMaskIntoConstraints="NO" id="yjY-Le-Lla">
-                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sroDCArtboard 11x2i" translatesAutoresizingMaskIntoConstraints="NO" id="yjY-Le-Lla">
+                                <rect key="frame" x="157" y="318" width="225" height="225"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Ek8-VY-Qvy" userLabel="height = 200"/>
-                                    <constraint firstAttribute="width" constant="100" id="N8j-3a-ywG" userLabel="width = 200"/>
+                                    <constraint firstAttribute="height" constant="225" id="Ek8-VY-Qvy" userLabel="height = 300"/>
+                                    <constraint firstAttribute="width" constant="225" id="N8j-3a-ywG" userLabel="width = 300"/>
                                 </constraints>
                             </imageView>
                         </subviews>

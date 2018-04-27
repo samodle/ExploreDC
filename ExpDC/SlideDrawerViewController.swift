@@ -58,7 +58,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     
   //  let assetfuelBlue = UIColor(red: 50/255, green: 205/255, blue: 240/255, alpha: 1)
     @IBOutlet var ContainerViewNew: UIView!
-  @IBOutlet var ScrollView: UIScrollView!
+    @IBOutlet var ScrollView: UIScrollView!
 
     @IBOutlet weak var CardViewA: CardView!
     @IBOutlet weak var CardViewB: CardView!
@@ -182,9 +182,8 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             mapDaddy.register(ArtworkView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         } else {
             // Fallback on earlier versions
-            let xyz3 = "moose"
+         //   let xyz3 = "moose"
         }
-        
         
         let regionRadiusX: CLLocationDistance = 7000
         let initialLocationx = CLLocation(latitude: 38.9072, longitude: -77.0369)
@@ -267,7 +266,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         self.CardViewE.addGestureRecognizer(gesture5)
         let gesture6 = UITapGestureRecognizer(target: self, action: #selector(SlideDrawerViewController.OpenAllKPIsF(_:)))
         self.CardViewF.addGestureRecognizer(gesture6)
-        
     }
 
     //MARK: Map Kit
@@ -328,12 +326,26 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     func goHome() {
         dismiss(animated: true, completion: nil)
     }
-   
+    
+   // var heightAnchor:NSLayoutConstraint!
+    
+    var ixx = 1
+    @IBOutlet weak var yourHeightConstraintOutlet: NSLayoutConstraint!
+    func mapView(_ mapView: MKMapView,
+                          didSelect view: MKAnnotationView){
+       // heightAnchor = SlideDrawerViewController.view.MainMapView.heightAnchor.constraint(equalToConstant:44.0)
+       // heightAnchor = mapPanoView.heightAnchor.constraint(equalToConstant: 350)
+       // heightAnchor.isActive = true
+        yourHeightConstraintOutlet.constant = 350
+        bigMapView.layoutIfNeeded()
+        
+        mapPanoView.load(UIImage(named: Media.photoArray[ixx]),
+                       of: GVRPanoramaImageType.mono)
+        ixx += 1
+    }
     
     //MARK: Other
     func ManageCardHeights() {
-        
-        
         let screenSize: CGRect = UIScreen.main.bounds
         let screenHeight = screenSize.height
         
