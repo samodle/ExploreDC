@@ -77,6 +77,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     @IBOutlet weak var mapDaddy: MKMapView!
     
     @IBOutlet weak var bigMapView: UIView!
+    @IBOutlet weak var mapPanoView: GVRPanoramaView!
     
     //MARK: Initialization
     
@@ -108,6 +109,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         panoCardA.enableInfoButton = false
         panoCardA.enableFullscreenButton = false
         panoCardA.enableCardboardButton = false
+        panoCardA.enableTouchTracking = VR_enableTouchTracking
         panoCardA.hidesTransitionView = VR_hidesTransitionView
         panoCardA.load(UIImage(named: Media.photoArray.first!),
                            of: GVRPanoramaImageType.mono)
@@ -115,6 +117,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         panoCardB.enableInfoButton = false
         panoCardB.enableFullscreenButton = false
         panoCardB.enableCardboardButton = false
+         panoCardB.enableTouchTracking = VR_enableTouchTracking
          panoCardB.hidesTransitionView = VR_hidesTransitionView
         panoCardB.load(UIImage(named: Media.photoArray.last!),
                            of: GVRPanoramaImageType.mono)
@@ -122,6 +125,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         panoCardC.enableInfoButton = false
         panoCardC.enableFullscreenButton = false
         panoCardC.enableCardboardButton = false
+         panoCardC.enableTouchTracking = VR_enableTouchTracking
          panoCardC.hidesTransitionView = VR_hidesTransitionView
         panoCardC.load(UIImage(named: Media.photoArray[1]),
                            of: GVRPanoramaImageType.mono)
@@ -129,6 +133,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         panoCardD.enableInfoButton = false
         panoCardD.enableFullscreenButton = false
         panoCardD.enableCardboardButton = false
+         panoCardD.enableTouchTracking = VR_enableTouchTracking
          panoCardD.hidesTransitionView = VR_hidesTransitionView
         panoCardD.load(UIImage(named: Media.photoArray[2]),
                        of: GVRPanoramaImageType.mono)
@@ -136,6 +141,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         panoCardE.enableInfoButton = false
         panoCardE.enableFullscreenButton = false
         panoCardE.enableCardboardButton = false
+         panoCardE.enableTouchTracking = VR_enableTouchTracking
          panoCardE.hidesTransitionView = VR_hidesTransitionView
         panoCardE.load(UIImage(named: Media.photoArray[3]),
                        of: GVRPanoramaImageType.mono)
@@ -143,9 +149,16 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         panoCardF.enableInfoButton = false
         panoCardF.enableFullscreenButton = false
         panoCardF.enableCardboardButton = false
+         panoCardF.enableTouchTracking = VR_enableTouchTracking
          panoCardF.hidesTransitionView = VR_hidesTransitionView
         panoCardF.load(UIImage(named: Media.photoArray[4]),
                        of: GVRPanoramaImageType.mono)
+        
+        mapPanoView.enableInfoButton = false
+        mapPanoView.enableFullscreenButton = true
+        mapPanoView.enableCardboardButton = true
+         mapPanoView.enableTouchTracking = VR_enableTouchTracking
+        mapPanoView.hidesTransitionView = VR_hidesTransitionView
         
         ManageCardHeights()
         

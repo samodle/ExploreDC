@@ -25,6 +25,7 @@ public enum Discipline{
 
 //MARK: Settings
 let VR_hidesTransitionView: Bool = true
+let VR_enableTouchTracking: Bool = true //main screen only
 
 
 struct PublicConstants{

@@ -534,13 +534,23 @@
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2ns-dq-TUz">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="616"/>
                                     </mapView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfg-2W-cuL" customClass="GVRPanoramaView">
+                                        <rect key="frame" x="0.0" y="616" width="414" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="vqK-Il-rj2"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="2ns-dq-TUz" firstAttribute="leading" secondItem="i2U-4f-VzK" secondAttribute="leading" id="3ig-vl-4Hw"/>
+                                    <constraint firstAttribute="bottom" secondItem="hfg-2W-cuL" secondAttribute="bottom" id="3vN-VQ-gTr"/>
+                                    <constraint firstAttribute="trailing" secondItem="hfg-2W-cuL" secondAttribute="trailing" id="S2t-Kb-PnX"/>
                                     <constraint firstAttribute="trailing" secondItem="2ns-dq-TUz" secondAttribute="trailing" id="Zhf-DX-gKw"/>
-                                    <constraint firstAttribute="bottom" secondItem="2ns-dq-TUz" secondAttribute="bottom" id="rNx-EQ-xT1"/>
                                     <constraint firstItem="2ns-dq-TUz" firstAttribute="top" secondItem="i2U-4f-VzK" secondAttribute="top" id="um7-RB-PiY"/>
+                                    <constraint firstItem="hfg-2W-cuL" firstAttribute="leading" secondItem="i2U-4f-VzK" secondAttribute="leading" id="w5R-b1-CTs"/>
+                                    <constraint firstItem="hfg-2W-cuL" firstAttribute="top" secondItem="2ns-dq-TUz" secondAttribute="bottom" id="yGU-jG-hJ2"/>
                                 </constraints>
                             </view>
                             <view alpha="0.94999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcX-FU-Kek" userLabel="MainMenuView">
@@ -634,6 +644,7 @@
                         <outlet property="ScrollView" destination="ULx-PZ-Y4V" id="ref-0J-e6g"/>
                         <outlet property="bigMapView" destination="i2U-4f-VzK" id="eeq-ws-NQH"/>
                         <outlet property="mapDaddy" destination="2ns-dq-TUz" id="Wjx-Bi-1TR"/>
+                        <outlet property="mapPanoView" destination="hfg-2W-cuL" id="4Hu-7V-KYH"/>
                         <outlet property="panoCardA" destination="eZ8-bN-EaZ" id="Xx3-Xr-L7A"/>
                         <outlet property="panoCardB" destination="oe4-k0-iYo" id="VxH-gT-Qzw"/>
                         <outlet property="panoCardC" destination="Fe4-ra-St6" id="NAt-QK-auz"/>
