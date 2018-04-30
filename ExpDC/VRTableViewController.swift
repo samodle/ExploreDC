@@ -13,11 +13,23 @@ class gvrTableViewCell: UITableViewCell {
       @IBOutlet weak var secondaryImageView: UIImageView!
     @IBOutlet weak var primaryTextLabel: UILabel!
     @IBOutlet weak var secondaryTextLabel: UILabel!
+    @IBOutlet weak var bigImgWidthConstraint: NSLayoutConstraint!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        if screenHeight > PublicConstants.BigScreenCutoff
+        {
+            
+        }else{
+            primaryImageView.isHidden = true
+            bigImgWidthConstraint.constant = 0
+        }
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -61,6 +73,8 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         // self.tableView.tableFooterView = UIView()
         
 
+        
+        
 
         let x: CGFloat = 15
         let button = UIButton.init(type: .custom)
@@ -115,6 +129,20 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         case .NA:
               break
         }
+        
+        
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        if screenHeight > PublicConstants.BigScreenCutoff
+        {
+            
+        }else{
+            
+        }
+        
+        
+        
         
     }
     

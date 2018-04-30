@@ -331,8 +331,14 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
                           didSelect view: MKAnnotationView){
   
         if firstMapBoop {
-            
+            let screenSize: CGRect = UIScreen.main.bounds
+            let screenHeight = screenSize.height
+            if screenHeight > PublicConstants.BigScreenCutoff
+            {
             yourHeightConstraintOutlet.constant = 350
+            }   else{
+                 yourHeightConstraintOutlet.constant = 250
+            }
             bigMapView.layoutIfNeeded()
             
             let regionRadiusX: CLLocationDistance = 7000

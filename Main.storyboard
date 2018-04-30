@@ -792,6 +792,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bigImgWidthConstraint" destination="Vlq-II-KyH" id="gpe-NL-vdg"/>
                                             <outlet property="primaryImageView" destination="N1Z-WB-Ujm" id="igX-0o-GrP"/>
                                             <outlet property="primaryTextLabel" destination="0Gp-d9-shD" id="jJz-WE-YDP"/>
                                             <outlet property="secondaryImageView" destination="fwx-Xx-cUI" id="LMJ-et-xeb"/>
