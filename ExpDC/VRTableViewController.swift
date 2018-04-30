@@ -83,6 +83,7 @@ class VRTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         mainPanoView.enableFullscreenButton = true
         mainPanoView.enableCardboardButton = true
         mainPanoView.enableInfoButton = false
+        mainPanoView.enableTouchTracking = VR_enableTouchTracking
         mainPanoView.hidesTransitionView = VR_hidesTransitionView
         
    

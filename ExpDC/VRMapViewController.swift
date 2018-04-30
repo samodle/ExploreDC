@@ -18,6 +18,7 @@ class VRMapViewController: UIViewController {
 
     //MARK: Variables
     var lastCardClick: FloatingCard = FloatingCard.NA
+
     @IBOutlet weak var myMapView: MKMapView!
     @IBOutlet weak var myNavBar: UINavigationItem!
     
@@ -28,6 +29,7 @@ class VRMapViewController: UIViewController {
         mainPanoView.enableFullscreenButton = true
         mainPanoView.enableCardboardButton = true
         mainPanoView.enableInfoButton = false
+        mainPanoView.enableTouchTracking = VR_enableTouchTracking
         mainPanoView.hidesTransitionView = VR_hidesTransitionView
         mainPanoView.load(UIImage(named: "taft00.jpg"),
                           of: GVRPanoramaImageType.mono)

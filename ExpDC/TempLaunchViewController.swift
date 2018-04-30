@@ -23,7 +23,7 @@ class TempLaunchViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(250)) {
             self.WoopWoop()
-                 }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

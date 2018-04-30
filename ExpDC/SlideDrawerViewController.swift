@@ -10,6 +10,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     //MARK: GVR SDK
     var currentView: UIView?
     var currentDisplayMode = GVRWidgetDisplayMode.embedded
+          var firstMapBoop: Bool = true
     
     enum Media {
         static var photoArray = ["bg01.jpg", "bg02.jpg", "bg03.jpg", "bible00.jpg", "bible01.jpg", "bible02.jpg",  "garfield00.jpg", "mall00.jpg", "mall01.jpg", "mall02.jpg", "taft00.jpg", "union.jpg", "verizon00.jpg", "verizon01.jpg", "vets00.jpg", "wharf.jpg"]
@@ -101,11 +102,6 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
         super.viewDidAppear(animated)
         
          checkLocationAuthorizationStatus()
-        
-     //   if(DidWeJustUnwind){
-      //      DidWeJustUnwind = false
-      //      performSegue(withIdentifier: SegueToExecute, sender: self)
-      //  }
     }
 
     override func viewDidLoad() {
@@ -285,7 +281,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     //MARK: Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowCategorySegue" { //this means we are gonna do drugs. right? right guys?
+        if segue.identifier == "ShowCategorySegue" {
 
             let toolPageViewController = segue.destination as! VRTableViewController
             toolPageViewController.lastCardClick = LastCardTapped
@@ -333,15 +329,25 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
     @IBOutlet weak var yourHeightConstraintOutlet: NSLayoutConstraint!
     func mapView(_ mapView: MKMapView,
                           didSelect view: MKAnnotationView){
-       // heightAnchor = SlideDrawerViewController.view.MainMapView.heightAnchor.constraint(equalToConstant:44.0)
-       // heightAnchor = mapPanoView.heightAnchor.constraint(equalToConstant: 350)
-       // heightAnchor.isActive = true
-        yourHeightConstraintOutlet.constant = 350
-        bigMapView.layoutIfNeeded()
+  
+        if firstMapBoop {
+            
+            yourHeightConstraintOutlet.constant = 350
+            bigMapView.layoutIfNeeded()
+            
+            let regionRadiusX: CLLocationDistance = 7000
+            let initialLocationx = CLLocation(latitude: mapDaddy.centerCoordinate.latitude + 0.000001, longitude: mapDaddy.centerCoordinate.longitude)
+            centerMapOnLocation(location: initialLocationx,mKmV: mapDaddy, regionRadius: regionRadiusX)
+            firstMapBoop = false
+        }
         
         mapPanoView.load(UIImage(named: Media.photoArray[ixx]),
-                       of: GVRPanoramaImageType.mono)
+                         of: GVRPanoramaImageType.mono)
         ixx += 1
+        if ixx > 7 {
+            ixx = 1
+        }
+      
     }
     
     //MARK: Other
@@ -375,7 +381,7 @@ class SlideDrawerViewController: UIViewController, SMSegmentViewDelegate {
             let CardViewDHeight = CardViewD.heightAnchor.constraint(equalToConstant: PublicConstants.SmallHeightAnchor)
             let CardViewEHeight = CardViewE.heightAnchor.constraint(equalToConstant: PublicConstants.SmallHeightAnchor)
             let CardViewFHeight = CardViewF.heightAnchor.constraint(equalToConstant: PublicConstants.SmallHeightAnchor)
-            let ContainerViewHeight = ContainerViewNew.heightAnchor.constraint(equalToConstant: 2600)
+            let ContainerViewHeight = ContainerViewNew.heightAnchor.constraint(equalToConstant: 1800)
             
             CardViewAHeight.isActive = true
             CardViewBHeight.isActive = true
